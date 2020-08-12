@@ -152,11 +152,11 @@ namespace MusicPlayer
             lbl_AmLuong.Text = bunifuSlider1.Value.ToString();
             if (bunifuSlider1.Value == 0)
             {
-                btn_AmLuong.Image = Image.FromFile(@"F:\Githud\SSPlayEnjpyMusic\SSEnjoyPlayMusic\MusicPlayer\Image\Mute_100px.png");
+                btn_AmLuong.Image = Properties.Resources.Mute_100px;
             }
             else
             {
-                btn_AmLuong.Image = Image.FromFile(@"F:\Githud\SSPlayEnjpyMusic\SSEnjoyPlayMusic\MusicPlayer\Image\audio_100px.png");
+                btn_AmLuong.Image = Properties.Resources.audio_100px;
             }
         }
 
@@ -164,7 +164,7 @@ namespace MusicPlayer
         {
             if (bunifuSlider1.Value > 0)
             {
-                btn_AmLuong.Image = Image.FromFile(@"F:\Githud\SSPlayEnjpyMusic\SSEnjoyPlayMusic\MusicPlayer\Image\No Audio_100px.png");
+                btn_AmLuong.Image = Properties.Resources.No_Audio_100px;
                 axWMP_main.settings.volume = 0;
             }
         }
@@ -503,7 +503,7 @@ namespace MusicPlayer
         {
             if (repeatStatus == false)
             {
-                IgmBtnRepeat.Image = Image.FromFile(@"F:\Githud\SSPlayEnjpyMusic\SSEnjoyPlayMusic\MusicPlayer\Image\not_repeat100px.png");
+                IgmBtnRepeat.Image = Properties.Resources.not_repeat100px;
                 repeatStatus = true;
                 if(randomStatus == true)
                 {
@@ -513,7 +513,7 @@ namespace MusicPlayer
             else
             {
                 repeatStatus = false;
-                IgmBtnRepeat.Image = Image.FromFile(@"F:\Githud\SSPlayEnjpyMusic\SSEnjoyPlayMusic\MusicPlayer\Image\available_updates_100px.png");
+                IgmBtnRepeat.Image = Properties.Resources.available_updates_100px;
             }
         }
         private void btn_Browser_Click(object sender, EventArgs e)

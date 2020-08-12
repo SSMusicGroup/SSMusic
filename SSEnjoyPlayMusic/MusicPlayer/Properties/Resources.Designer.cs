@@ -253,6 +253,16 @@ namespace MusicPlayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap not_repeat100px {
+            get {
+                object obj = ResourceManager.GetObject("not_repeat100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ok_48px {
             get {
                 object obj = ResourceManager.GetObject("ok_48px", resourceCulture);
