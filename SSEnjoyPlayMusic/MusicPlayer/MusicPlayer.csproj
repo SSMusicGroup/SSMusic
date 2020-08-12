@@ -145,6 +145,7 @@
     <Content Include="Image\shuffle_100px.png" />
     <Content Include="Image\skip_to_start_100px.png" />
     <Content Include="Image\stop_100px.png" />
+    <None Include="Resources\not_shuffle_100px.png" />
     <None Include="Resources\edit_user_100px.png" />
     <None Include="Resources\music_folder_100px.png" />
     <None Include="Resources\Image_Music.bmp" />

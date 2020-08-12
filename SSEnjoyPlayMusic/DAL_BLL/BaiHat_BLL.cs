@@ -52,7 +52,7 @@ namespace DAL_BLL
 
             bh.maBaiHat = "BH00" + count;
             bh.tenBaiHat = tenBH;
-            bh.maCaSi = "CS001";
+            bh.maCaSi = null;
             bh.pathBaiHat = pathName;
 
             da.BaiHats.InsertOnSubmit(bh);

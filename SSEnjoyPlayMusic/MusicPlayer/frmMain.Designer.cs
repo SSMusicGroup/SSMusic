@@ -30,15 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -65,6 +65,13 @@
             this.lbl_AmLuong = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btn_AmLuong = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.gbPLaylist = new System.Windows.Forms.GroupBox();
+            this.btnPhat_PLaylist = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnPhatAll_PLaylist = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.cboPlayList = new System.Windows.Forms.ComboBox();
+            this.dgvPlaylist = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.axWMP_main = new AxWMPLib.AxWindowsMediaPlayer();
             this.gbBaihat = new System.Windows.Forms.GroupBox();
             this.btnPhatBaiHat = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnPhatAllBaiHat = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -77,13 +84,6 @@
             this.dgvCaSi = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbo_CaSi = new System.Windows.Forms.ComboBox();
-            this.gbPLaylist = new System.Windows.Forms.GroupBox();
-            this.btnPhat_PLaylist = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnPhatAll_PLaylist = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.cboPlayList = new System.Windows.Forms.ComboBox();
-            this.dgvPlaylist = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.axWMP_main = new AxWMPLib.AxWindowsMediaPlayer();
             this.pn_menu = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -103,6 +103,9 @@
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuDragControl3 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.time_song = new System.Windows.Forms.Timer(this.components);
+            this.menuBaiHat = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.thêmTênCaSĩToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thêmBàiHátVàoPlaylistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -123,13 +126,13 @@
             this.tableLayoutPanel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_AmLuong)).BeginInit();
             this.panel1.SuspendLayout();
+            this.gbPLaylist.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPlaylist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWMP_main)).BeginInit();
             this.gbBaihat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaiHat)).BeginInit();
             this.gbCaSi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCaSi)).BeginInit();
-            this.gbPLaylist.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPlaylist)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWMP_main)).BeginInit();
             this.pn_menu.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -139,6 +142,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_Min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).BeginInit();
+            this.menuBaiHat.SuspendLayout();
             this.SuspendLayout();
             // 
             // axWindowsMediaPlayer1
@@ -528,17 +532,175 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.gbPLaylist);
-            this.panel1.Controls.Add(this.axWMP_main);
             this.panel1.Controls.Add(this.gbBaihat);
             this.panel1.Controls.Add(this.lbox_ListNhac);
             this.panel1.Controls.Add(this.gbCaSi);
+            this.panel1.Controls.Add(this.gbPLaylist);
+            this.panel1.Controls.Add(this.axWMP_main);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(516, 296);
             this.panel1.TabIndex = 3;
+            // 
+            // gbPLaylist
+            // 
+            this.gbPLaylist.BackColor = System.Drawing.Color.PowderBlue;
+            this.gbPLaylist.Controls.Add(this.btnPhat_PLaylist);
+            this.gbPLaylist.Controls.Add(this.btnPhatAll_PLaylist);
+            this.gbPLaylist.Controls.Add(this.cboPlayList);
+            this.gbPLaylist.Controls.Add(this.dgvPlaylist);
+            this.gbPLaylist.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbPLaylist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.gbPLaylist.Location = new System.Drawing.Point(0, 0);
+            this.gbPLaylist.Name = "gbPLaylist";
+            this.gbPLaylist.Size = new System.Drawing.Size(516, 296);
+            this.gbPLaylist.TabIndex = 3;
+            this.gbPLaylist.TabStop = false;
+            // 
+            // btnPhat_PLaylist
+            // 
+            this.btnPhat_PLaylist.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnPhat_PLaylist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnPhat_PLaylist.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPhat_PLaylist.BorderRadius = 0;
+            this.btnPhat_PLaylist.ButtonText = "Phát";
+            this.btnPhat_PLaylist.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPhat_PLaylist.DisabledColor = System.Drawing.Color.Gray;
+            this.btnPhat_PLaylist.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnPhat_PLaylist.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPhat_PLaylist.Iconimage")));
+            this.btnPhat_PLaylist.Iconimage_right = null;
+            this.btnPhat_PLaylist.Iconimage_right_Selected = null;
+            this.btnPhat_PLaylist.Iconimage_Selected = null;
+            this.btnPhat_PLaylist.IconMarginLeft = 0;
+            this.btnPhat_PLaylist.IconMarginRight = 0;
+            this.btnPhat_PLaylist.IconRightVisible = true;
+            this.btnPhat_PLaylist.IconRightZoom = 0D;
+            this.btnPhat_PLaylist.IconVisible = true;
+            this.btnPhat_PLaylist.IconZoom = 90D;
+            this.btnPhat_PLaylist.IsTab = false;
+            this.btnPhat_PLaylist.Location = new System.Drawing.Point(267, 55);
+            this.btnPhat_PLaylist.Name = "btnPhat_PLaylist";
+            this.btnPhat_PLaylist.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnPhat_PLaylist.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnPhat_PLaylist.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnPhat_PLaylist.selected = false;
+            this.btnPhat_PLaylist.Size = new System.Drawing.Size(241, 48);
+            this.btnPhat_PLaylist.TabIndex = 8;
+            this.btnPhat_PLaylist.Text = "Phát";
+            this.btnPhat_PLaylist.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPhat_PLaylist.Textcolor = System.Drawing.Color.White;
+            this.btnPhat_PLaylist.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhat_PLaylist.Click += new System.EventHandler(this.btnPhat_PLaylist_Click);
+            // 
+            // btnPhatAll_PLaylist
+            // 
+            this.btnPhatAll_PLaylist.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnPhatAll_PLaylist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnPhatAll_PLaylist.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPhatAll_PLaylist.BorderRadius = 0;
+            this.btnPhatAll_PLaylist.ButtonText = "Phát tất cả";
+            this.btnPhatAll_PLaylist.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPhatAll_PLaylist.DisabledColor = System.Drawing.Color.Gray;
+            this.btnPhatAll_PLaylist.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnPhatAll_PLaylist.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPhatAll_PLaylist.Iconimage")));
+            this.btnPhatAll_PLaylist.Iconimage_right = null;
+            this.btnPhatAll_PLaylist.Iconimage_right_Selected = null;
+            this.btnPhatAll_PLaylist.Iconimage_Selected = null;
+            this.btnPhatAll_PLaylist.IconMarginLeft = 0;
+            this.btnPhatAll_PLaylist.IconMarginRight = 0;
+            this.btnPhatAll_PLaylist.IconRightVisible = true;
+            this.btnPhatAll_PLaylist.IconRightZoom = 0D;
+            this.btnPhatAll_PLaylist.IconVisible = true;
+            this.btnPhatAll_PLaylist.IconZoom = 90D;
+            this.btnPhatAll_PLaylist.IsTab = false;
+            this.btnPhatAll_PLaylist.Location = new System.Drawing.Point(8, 55);
+            this.btnPhatAll_PLaylist.Name = "btnPhatAll_PLaylist";
+            this.btnPhatAll_PLaylist.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnPhatAll_PLaylist.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnPhatAll_PLaylist.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnPhatAll_PLaylist.selected = false;
+            this.btnPhatAll_PLaylist.Size = new System.Drawing.Size(241, 48);
+            this.btnPhatAll_PLaylist.TabIndex = 7;
+            this.btnPhatAll_PLaylist.Text = "Phát tất cả";
+            this.btnPhatAll_PLaylist.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPhatAll_PLaylist.Textcolor = System.Drawing.Color.White;
+            this.btnPhatAll_PLaylist.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhatAll_PLaylist.Click += new System.EventHandler(this.btnPhatAll_PLaylist_Click);
+            // 
+            // cboPlayList
+            // 
+            this.cboPlayList.FormattingEnabled = true;
+            this.cboPlayList.Location = new System.Drawing.Point(3, 19);
+            this.cboPlayList.Name = "cboPlayList";
+            this.cboPlayList.Size = new System.Drawing.Size(243, 21);
+            this.cboPlayList.TabIndex = 5;
+            this.cboPlayList.SelectedIndexChanged += new System.EventHandler(this.cboPlayList_SelectedIndexChanged);
+            this.cboPlayList.SelectedValueChanged += new System.EventHandler(this.cboPlayList_SelectedValueChanged);
+            // 
+            // dgvPlaylist
+            // 
+            this.dgvPlaylist.AllowUserToAddRows = false;
+            this.dgvPlaylist.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvPlaylist.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvPlaylist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPlaylist.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvPlaylist.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvPlaylist.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPlaylist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvPlaylist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPlaylist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1});
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPlaylist.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvPlaylist.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvPlaylist.DoubleBuffered = true;
+            this.dgvPlaylist.EnableHeadersVisualStyles = false;
+            this.dgvPlaylist.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvPlaylist.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvPlaylist.Location = new System.Drawing.Point(3, 119);
+            this.dgvPlaylist.Name = "dgvPlaylist";
+            this.dgvPlaylist.ReadOnly = true;
+            this.dgvPlaylist.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvPlaylist.RowHeadersVisible = false;
+            this.dgvPlaylist.Size = new System.Drawing.Size(510, 174);
+            this.dgvPlaylist.TabIndex = 4;
+            this.dgvPlaylist.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPlaylist_CellMouseDoubleClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "tenBaiHat";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Bài hát";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // axWMP_main
+            // 
+            this.axWMP_main.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.axWMP_main.Enabled = true;
+            this.axWMP_main.Location = new System.Drawing.Point(0, 0);
+            this.axWMP_main.Margin = new System.Windows.Forms.Padding(2);
+            this.axWMP_main.Name = "axWMP_main";
+            this.axWMP_main.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWMP_main.OcxState")));
+            this.axWMP_main.Size = new System.Drawing.Size(516, 296);
+            this.axWMP_main.TabIndex = 0;
+            this.axWMP_main.Visible = false;
+            this.axWMP_main.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.axWMP_main_PlayStateChange);
             // 
             // gbBaihat
             // 
@@ -628,31 +790,31 @@
             // 
             this.dgvBaiHat.AllowUserToAddRows = false;
             this.dgvBaiHat.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvBaiHat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvBaiHat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvBaiHat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBaiHat.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvBaiHat.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBaiHat.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBaiHat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBaiHat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvBaiHat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBaiHat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBaiHat.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBaiHat.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvBaiHat.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvBaiHat.DoubleBuffered = true;
             this.dgvBaiHat.EnableHeadersVisualStyles = false;
@@ -779,31 +941,31 @@
             // 
             this.dgvCaSi.AllowUserToAddRows = false;
             this.dgvCaSi.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvCaSi.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvCaSi.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCaSi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCaSi.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvCaSi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCaSi.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCaSi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCaSi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCaSi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCaSi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCaSi.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCaSi.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCaSi.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvCaSi.DoubleBuffered = true;
             this.dgvCaSi.EnableHeadersVisualStyles = false;
@@ -816,6 +978,7 @@
             this.dgvCaSi.RowHeadersVisible = false;
             this.dgvCaSi.Size = new System.Drawing.Size(510, 174);
             this.dgvCaSi.TabIndex = 3;
+            this.dgvCaSi.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCaSi_CellMouseDoubleClick);
             // 
             // Column1
             // 
@@ -832,163 +995,6 @@
             this.cbo_CaSi.Size = new System.Drawing.Size(243, 21);
             this.cbo_CaSi.TabIndex = 2;
             this.cbo_CaSi.SelectedIndexChanged += new System.EventHandler(this.cbo_CaSi_SelectedIndexChanged);
-            // 
-            // gbPLaylist
-            // 
-            this.gbPLaylist.BackColor = System.Drawing.Color.PowderBlue;
-            this.gbPLaylist.Controls.Add(this.btnPhat_PLaylist);
-            this.gbPLaylist.Controls.Add(this.btnPhatAll_PLaylist);
-            this.gbPLaylist.Controls.Add(this.cboPlayList);
-            this.gbPLaylist.Controls.Add(this.dgvPlaylist);
-            this.gbPLaylist.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbPLaylist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.gbPLaylist.Location = new System.Drawing.Point(0, 0);
-            this.gbPLaylist.Name = "gbPLaylist";
-            this.gbPLaylist.Size = new System.Drawing.Size(516, 296);
-            this.gbPLaylist.TabIndex = 3;
-            this.gbPLaylist.TabStop = false;
-            // 
-            // btnPhat_PLaylist
-            // 
-            this.btnPhat_PLaylist.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnPhat_PLaylist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnPhat_PLaylist.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPhat_PLaylist.BorderRadius = 0;
-            this.btnPhat_PLaylist.ButtonText = "Phát";
-            this.btnPhat_PLaylist.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPhat_PLaylist.DisabledColor = System.Drawing.Color.Gray;
-            this.btnPhat_PLaylist.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnPhat_PLaylist.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPhat_PLaylist.Iconimage")));
-            this.btnPhat_PLaylist.Iconimage_right = null;
-            this.btnPhat_PLaylist.Iconimage_right_Selected = null;
-            this.btnPhat_PLaylist.Iconimage_Selected = null;
-            this.btnPhat_PLaylist.IconMarginLeft = 0;
-            this.btnPhat_PLaylist.IconMarginRight = 0;
-            this.btnPhat_PLaylist.IconRightVisible = true;
-            this.btnPhat_PLaylist.IconRightZoom = 0D;
-            this.btnPhat_PLaylist.IconVisible = true;
-            this.btnPhat_PLaylist.IconZoom = 90D;
-            this.btnPhat_PLaylist.IsTab = false;
-            this.btnPhat_PLaylist.Location = new System.Drawing.Point(267, 55);
-            this.btnPhat_PLaylist.Name = "btnPhat_PLaylist";
-            this.btnPhat_PLaylist.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnPhat_PLaylist.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btnPhat_PLaylist.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnPhat_PLaylist.selected = false;
-            this.btnPhat_PLaylist.Size = new System.Drawing.Size(241, 48);
-            this.btnPhat_PLaylist.TabIndex = 8;
-            this.btnPhat_PLaylist.Text = "Phát";
-            this.btnPhat_PLaylist.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPhat_PLaylist.Textcolor = System.Drawing.Color.White;
-            this.btnPhat_PLaylist.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhat_PLaylist.Click += new System.EventHandler(this.btnPhat_PLaylist_Click);
-            // 
-            // btnPhatAll_PLaylist
-            // 
-            this.btnPhatAll_PLaylist.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnPhatAll_PLaylist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnPhatAll_PLaylist.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPhatAll_PLaylist.BorderRadius = 0;
-            this.btnPhatAll_PLaylist.ButtonText = "Phát tất cả";
-            this.btnPhatAll_PLaylist.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPhatAll_PLaylist.DisabledColor = System.Drawing.Color.Gray;
-            this.btnPhatAll_PLaylist.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnPhatAll_PLaylist.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPhatAll_PLaylist.Iconimage")));
-            this.btnPhatAll_PLaylist.Iconimage_right = null;
-            this.btnPhatAll_PLaylist.Iconimage_right_Selected = null;
-            this.btnPhatAll_PLaylist.Iconimage_Selected = null;
-            this.btnPhatAll_PLaylist.IconMarginLeft = 0;
-            this.btnPhatAll_PLaylist.IconMarginRight = 0;
-            this.btnPhatAll_PLaylist.IconRightVisible = true;
-            this.btnPhatAll_PLaylist.IconRightZoom = 0D;
-            this.btnPhatAll_PLaylist.IconVisible = true;
-            this.btnPhatAll_PLaylist.IconZoom = 90D;
-            this.btnPhatAll_PLaylist.IsTab = false;
-            this.btnPhatAll_PLaylist.Location = new System.Drawing.Point(8, 55);
-            this.btnPhatAll_PLaylist.Name = "btnPhatAll_PLaylist";
-            this.btnPhatAll_PLaylist.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnPhatAll_PLaylist.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btnPhatAll_PLaylist.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnPhatAll_PLaylist.selected = false;
-            this.btnPhatAll_PLaylist.Size = new System.Drawing.Size(241, 48);
-            this.btnPhatAll_PLaylist.TabIndex = 7;
-            this.btnPhatAll_PLaylist.Text = "Phát tất cả";
-            this.btnPhatAll_PLaylist.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPhatAll_PLaylist.Textcolor = System.Drawing.Color.White;
-            this.btnPhatAll_PLaylist.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhatAll_PLaylist.Click += new System.EventHandler(this.btnPhatAll_PLaylist_Click);
-            // 
-            // cboPlayList
-            // 
-            this.cboPlayList.FormattingEnabled = true;
-            this.cboPlayList.Location = new System.Drawing.Point(3, 19);
-            this.cboPlayList.Name = "cboPlayList";
-            this.cboPlayList.Size = new System.Drawing.Size(243, 21);
-            this.cboPlayList.TabIndex = 5;
-            this.cboPlayList.SelectedIndexChanged += new System.EventHandler(this.cboPlayList_SelectedIndexChanged);
-            this.cboPlayList.SelectedValueChanged += new System.EventHandler(this.cboPlayList_SelectedValueChanged);
-            // 
-            // dgvPlaylist
-            // 
-            this.dgvPlaylist.AllowUserToAddRows = false;
-            this.dgvPlaylist.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvPlaylist.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
-            this.dgvPlaylist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPlaylist.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dgvPlaylist.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvPlaylist.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPlaylist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
-            this.dgvPlaylist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPlaylist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPlaylist.DefaultCellStyle = dataGridViewCellStyle18;
-            this.dgvPlaylist.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvPlaylist.DoubleBuffered = true;
-            this.dgvPlaylist.EnableHeadersVisualStyles = false;
-            this.dgvPlaylist.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dgvPlaylist.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvPlaylist.Location = new System.Drawing.Point(3, 119);
-            this.dgvPlaylist.Name = "dgvPlaylist";
-            this.dgvPlaylist.ReadOnly = true;
-            this.dgvPlaylist.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvPlaylist.RowHeadersVisible = false;
-            this.dgvPlaylist.Size = new System.Drawing.Size(510, 174);
-            this.dgvPlaylist.TabIndex = 4;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "tenBaiHat";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Bài hát";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // axWMP_main
-            // 
-            this.axWMP_main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.axWMP_main.Enabled = true;
-            this.axWMP_main.Location = new System.Drawing.Point(0, 0);
-            this.axWMP_main.Margin = new System.Windows.Forms.Padding(2);
-            this.axWMP_main.Name = "axWMP_main";
-            this.axWMP_main.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWMP_main.OcxState")));
-            this.axWMP_main.Size = new System.Drawing.Size(516, 296);
-            this.axWMP_main.TabIndex = 0;
-            this.axWMP_main.Visible = false;
-            this.axWMP_main.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.axWMP_main_PlayStateChange);
             // 
             // pn_menu
             // 
@@ -1361,6 +1367,32 @@
             // 
             this.time_song.Tick += new System.EventHandler(this.time_song_Tick);
             // 
+            // menuBaiHat
+            // 
+            this.menuBaiHat.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thêmTênCaSĩToolStripMenuItem,
+            this.thêmBàiHátVàoPlaylistToolStripMenuItem});
+            this.menuBaiHat.Name = "menuBaiHat";
+            this.menuBaiHat.Size = new System.Drawing.Size(211, 48);
+            // 
+            // thêmTênCaSĩToolStripMenuItem
+            // 
+            this.thêmTênCaSĩToolStripMenuItem.BackColor = System.Drawing.Color.SkyBlue;
+            this.thêmTênCaSĩToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.thêmTênCaSĩToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.thêmTênCaSĩToolStripMenuItem.Name = "thêmTênCaSĩToolStripMenuItem";
+            this.thêmTênCaSĩToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.thêmTênCaSĩToolStripMenuItem.Text = "Thêm tên ca sĩ";
+            // 
+            // thêmBàiHátVàoPlaylistToolStripMenuItem
+            // 
+            this.thêmBàiHátVàoPlaylistToolStripMenuItem.BackColor = System.Drawing.Color.SkyBlue;
+            this.thêmBàiHátVàoPlaylistToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.thêmBàiHátVàoPlaylistToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.thêmBàiHátVàoPlaylistToolStripMenuItem.Name = "thêmBàiHátVàoPlaylistToolStripMenuItem";
+            this.thêmBàiHátVàoPlaylistToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.thêmBàiHátVàoPlaylistToolStripMenuItem.Text = "Thêm bài hát vào playlist";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1395,13 +1427,13 @@
             this.tableLayoutPanel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_AmLuong)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.gbPLaylist.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPlaylist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWMP_main)).EndInit();
             this.gbBaihat.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaiHat)).EndInit();
             this.gbCaSi.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCaSi)).EndInit();
-            this.gbPLaylist.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPlaylist)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWMP_main)).EndInit();
             this.pn_menu.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
@@ -1411,6 +1443,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_Min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Max)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).EndInit();
+            this.menuBaiHat.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1481,5 +1514,8 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnPhat_PLaylist;
         private Bunifu.Framework.UI.BunifuFlatButton btnPhatAll_PLaylist;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.ContextMenuStrip menuBaiHat;
+        private System.Windows.Forms.ToolStripMenuItem thêmTênCaSĩToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thêmBàiHátVàoPlaylistToolStripMenuItem;
     }
 }

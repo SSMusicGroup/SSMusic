@@ -137,18 +137,6 @@
         RU5ErkJggg==
 </value>
   </data>
-  <data name="pn_menu.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFrSURBVChTDc0JThNhAIDR/zbGoKKCCKnIIiIisgipgCIi
-        Iu5GwoWIUSRNofusnbZMp53prF2sGONZPudd4Ind3//Y6l6QjHos+SFzTovphkXCrDJc0bmqS1xScoi9
-        /l+2O33Www4rns+8bTNjmYyfG4wYKoNakctyBrH/6w877R6bQcSq67LQbDBbrzFR0xkty9xQ8wxIp4h3
-        vQteRV2e+QFrLYfFuH0Qt5NVjTG9xJCS5UopjfjQ7fM6bLPleSSdJstx+zBupysKCa3ALfmMa8UU4lOn
-        x5sgZNttsW5bPInbR3E7Y0iMqzluS2muF04QX9od3gY+O67NZtNkrV7hcVVltlxkQs0wVkpxM3+M+BpF
-        vPdddlsNnjdqJM0ySxWZOT3PlHJKonjCcO474iAM+Og57DkWL6wqT881VowS81qWe3KaO4WfjGS/IQ4D
-        j89uk33b5GXdYKOmsFousKCecV9KcTf/g9HMEf8BxT4Y4xh/PSoAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="btnPhatBaiHat.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -547,6 +535,18 @@
         AAAL
 </value>
   </data>
+  <data name="pn_menu.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFrSURBVChTDc0JThNhAIDR/zbGoKKCCKnIIiIisgipgCIi
+        Iu5GwoWIUSRNofusnbZMp53prF2sGONZPudd4Ind3//Y6l6QjHos+SFzTovphkXCrDJc0bmqS1xScoi9
+        /l+2O33Www4rns+8bTNjmYyfG4wYKoNakctyBrH/6w877R6bQcSq67LQbDBbrzFR0xkty9xQ8wxIp4h3
+        vQteRV2e+QFrLYfFuH0Qt5NVjTG9xJCS5UopjfjQ7fM6bLPleSSdJstx+zBupysKCa3ALfmMa8UU4lOn
+        x5sgZNttsW5bPInbR3E7Y0iMqzluS2muF04QX9od3gY+O67NZtNkrV7hcVVltlxkQs0wVkpxM3+M+BpF
+        vPdddlsNnjdqJM0ySxWZOT3PlHJKonjCcO474iAM+Og57DkWL6wqT881VowS81qWe3KaO4WfjGS/IQ4D
+        j89uk33b5GXdYKOmsFousKCecV9KcTf/g9HMEf8BxT4Y4xh/PSoAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="btn_NowPlay.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAD5BJREFUeF7t
@@ -633,5 +633,8 @@
   </metadata>
   <metadata name="time_song.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>729, 17</value>
+  </metadata>
+  <metadata name="menuBaiHat.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
   </metadata>
 </root>

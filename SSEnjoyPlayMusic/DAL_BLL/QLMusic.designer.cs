@@ -33,15 +33,15 @@ namespace DAL_BLL
     partial void InsertBaiHat(BaiHat instance);
     partial void UpdateBaiHat(BaiHat instance);
     partial void DeleteBaiHat(BaiHat instance);
-    partial void InsertPlaylist(Playlist instance);
-    partial void UpdatePlaylist(Playlist instance);
-    partial void DeletePlaylist(Playlist instance);
-    partial void InsertBaiHatVaPlayList(BaiHatVaPlayList instance);
-    partial void UpdateBaiHatVaPlayList(BaiHatVaPlayList instance);
-    partial void DeleteBaiHatVaPlayList(BaiHatVaPlayList instance);
     partial void InsertCaSi(CaSi instance);
     partial void UpdateCaSi(CaSi instance);
     partial void DeleteCaSi(CaSi instance);
+    partial void InsertBaiHatVaPlayList(BaiHatVaPlayList instance);
+    partial void UpdateBaiHatVaPlayList(BaiHatVaPlayList instance);
+    partial void DeleteBaiHatVaPlayList(BaiHatVaPlayList instance);
+    partial void InsertPlaylist(Playlist instance);
+    partial void UpdatePlaylist(Playlist instance);
+    partial void DeletePlaylist(Playlist instance);
     #endregion
 		
 		public QLMusicDataContext() : 
@@ -82,11 +82,11 @@ namespace DAL_BLL
 			}
 		}
 		
-		public System.Data.Linq.Table<Playlist> Playlists
+		public System.Data.Linq.Table<CaSi> CaSis
 		{
 			get
 			{
-				return this.GetTable<Playlist>();
+				return this.GetTable<CaSi>();
 			}
 		}
 		
@@ -98,11 +98,11 @@ namespace DAL_BLL
 			}
 		}
 		
-		public System.Data.Linq.Table<CaSi> CaSis
+		public System.Data.Linq.Table<Playlist> Playlists
 		{
 			get
 			{
-				return this.GetTable<CaSi>();
+				return this.GetTable<Playlist>();
 			}
 		}
 	}
@@ -123,6 +123,8 @@ namespace DAL_BLL
 		
 		private EntitySet<BaiHatVaPlayList> _BaiHatVaPlayLists;
 		
+		private EntityRef<CaSi> _CaSi;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -140,6 +142,7 @@ namespace DAL_BLL
 		public BaiHat()
 		{
 			this._BaiHatVaPlayLists = new EntitySet<BaiHatVaPlayList>(new Action<BaiHatVaPlayList>(this.attach_BaiHatVaPlayLists), new Action<BaiHatVaPlayList>(this.detach_BaiHatVaPlayLists));
+			this._CaSi = default(EntityRef<CaSi>);
 			OnCreated();
 		}
 		
@@ -163,7 +166,7 @@ namespace DAL_BLL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenBaiHat", DbType="NVarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenBaiHat", DbType="NVarChar(255)")]
 		public string tenBaiHat
 		{
 			get
@@ -194,6 +197,10 @@ namespace DAL_BLL
 			{
 				if ((this._maCaSi != value))
 				{
+					if (this._CaSi.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnmaCaSiChanging(value);
 					this.SendPropertyChanging();
 					this._maCaSi = value;
@@ -203,7 +210,7 @@ namespace DAL_BLL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pathBaiHat", DbType="NChar(100)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pathBaiHat", DbType="NVarChar(255)")]
 		public string pathBaiHat
 		{
 			get
@@ -233,6 +240,40 @@ namespace DAL_BLL
 			set
 			{
 				this._BaiHatVaPlayLists.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CaSi_BaiHat", Storage="_CaSi", ThisKey="maCaSi", OtherKey="maCaSi", IsForeignKey=true)]
+		public CaSi CaSi
+		{
+			get
+			{
+				return this._CaSi.Entity;
+			}
+			set
+			{
+				CaSi previousValue = this._CaSi.Entity;
+				if (((previousValue != value) 
+							|| (this._CaSi.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._CaSi.Entity = null;
+						previousValue.BaiHats.Remove(this);
+					}
+					this._CaSi.Entity = value;
+					if ((value != null))
+					{
+						value.BaiHats.Add(this);
+						this._maCaSi = value.maCaSi;
+					}
+					else
+					{
+						this._maCaSi = default(string);
+					}
+					this.SendPropertyChanged("CaSi");
+				}
 			}
 		}
 		
@@ -269,84 +310,84 @@ namespace DAL_BLL
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Playlist")]
-	public partial class Playlist : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CaSi")]
+	public partial class CaSi : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _maPlaylist;
+		private string _maCaSi;
 		
-		private string _tenPlaylist;
+		private string _tenCaSi;
 		
-		private EntitySet<BaiHatVaPlayList> _BaiHatVaPlayLists;
+		private EntitySet<BaiHat> _BaiHats;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnmaPlaylistChanging(string value);
-    partial void OnmaPlaylistChanged();
-    partial void OntenPlaylistChanging(string value);
-    partial void OntenPlaylistChanged();
+    partial void OnmaCaSiChanging(string value);
+    partial void OnmaCaSiChanged();
+    partial void OntenCaSiChanging(string value);
+    partial void OntenCaSiChanged();
     #endregion
 		
-		public Playlist()
+		public CaSi()
 		{
-			this._BaiHatVaPlayLists = new EntitySet<BaiHatVaPlayList>(new Action<BaiHatVaPlayList>(this.attach_BaiHatVaPlayLists), new Action<BaiHatVaPlayList>(this.detach_BaiHatVaPlayLists));
+			this._BaiHats = new EntitySet<BaiHat>(new Action<BaiHat>(this.attach_BaiHats), new Action<BaiHat>(this.detach_BaiHats));
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maPlaylist", DbType="NChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string maPlaylist
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maCaSi", DbType="NChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string maCaSi
 		{
 			get
 			{
-				return this._maPlaylist;
+				return this._maCaSi;
 			}
 			set
 			{
-				if ((this._maPlaylist != value))
+				if ((this._maCaSi != value))
 				{
-					this.OnmaPlaylistChanging(value);
+					this.OnmaCaSiChanging(value);
 					this.SendPropertyChanging();
-					this._maPlaylist = value;
-					this.SendPropertyChanged("maPlaylist");
-					this.OnmaPlaylistChanged();
+					this._maCaSi = value;
+					this.SendPropertyChanged("maCaSi");
+					this.OnmaCaSiChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenPlaylist", DbType="NVarChar(50)")]
-		public string tenPlaylist
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenCaSi", DbType="NVarChar(50)")]
+		public string tenCaSi
 		{
 			get
 			{
-				return this._tenPlaylist;
+				return this._tenCaSi;
 			}
 			set
 			{
-				if ((this._tenPlaylist != value))
+				if ((this._tenCaSi != value))
 				{
-					this.OntenPlaylistChanging(value);
+					this.OntenCaSiChanging(value);
 					this.SendPropertyChanging();
-					this._tenPlaylist = value;
-					this.SendPropertyChanged("tenPlaylist");
-					this.OntenPlaylistChanged();
+					this._tenCaSi = value;
+					this.SendPropertyChanged("tenCaSi");
+					this.OntenCaSiChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Playlist_BaiHatVaPlayList", Storage="_BaiHatVaPlayLists", ThisKey="maPlaylist", OtherKey="maPlaylist")]
-		public EntitySet<BaiHatVaPlayList> BaiHatVaPlayLists
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CaSi_BaiHat", Storage="_BaiHats", ThisKey="maCaSi", OtherKey="maCaSi")]
+		public EntitySet<BaiHat> BaiHats
 		{
 			get
 			{
-				return this._BaiHatVaPlayLists;
+				return this._BaiHats;
 			}
 			set
 			{
-				this._BaiHatVaPlayLists.Assign(value);
+				this._BaiHats.Assign(value);
 			}
 		}
 		
@@ -370,16 +411,16 @@ namespace DAL_BLL
 			}
 		}
 		
-		private void attach_BaiHatVaPlayLists(BaiHatVaPlayList entity)
+		private void attach_BaiHats(BaiHat entity)
 		{
 			this.SendPropertyChanging();
-			entity.Playlist = this;
+			entity.CaSi = this;
 		}
 		
-		private void detach_BaiHatVaPlayLists(BaiHatVaPlayList entity)
+		private void detach_BaiHats(BaiHat entity)
 		{
 			this.SendPropertyChanging();
-			entity.Playlist = null;
+			entity.CaSi = null;
 		}
 	}
 	
@@ -551,68 +592,84 @@ namespace DAL_BLL
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CaSi")]
-	public partial class CaSi : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Playlist")]
+	public partial class Playlist : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _maCaSi;
+		private string _maPlaylist;
 		
-		private string _tenCaSi;
+		private string _tenPlaylist;
+		
+		private EntitySet<BaiHatVaPlayList> _BaiHatVaPlayLists;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnmaCaSiChanging(string value);
-    partial void OnmaCaSiChanged();
-    partial void OntenCaSiChanging(string value);
-    partial void OntenCaSiChanged();
+    partial void OnmaPlaylistChanging(string value);
+    partial void OnmaPlaylistChanged();
+    partial void OntenPlaylistChanging(string value);
+    partial void OntenPlaylistChanged();
     #endregion
 		
-		public CaSi()
+		public Playlist()
 		{
+			this._BaiHatVaPlayLists = new EntitySet<BaiHatVaPlayList>(new Action<BaiHatVaPlayList>(this.attach_BaiHatVaPlayLists), new Action<BaiHatVaPlayList>(this.detach_BaiHatVaPlayLists));
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maCaSi", DbType="NChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string maCaSi
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maPlaylist", DbType="NChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string maPlaylist
 		{
 			get
 			{
-				return this._maCaSi;
+				return this._maPlaylist;
 			}
 			set
 			{
-				if ((this._maCaSi != value))
+				if ((this._maPlaylist != value))
 				{
-					this.OnmaCaSiChanging(value);
+					this.OnmaPlaylistChanging(value);
 					this.SendPropertyChanging();
-					this._maCaSi = value;
-					this.SendPropertyChanged("maCaSi");
-					this.OnmaCaSiChanged();
+					this._maPlaylist = value;
+					this.SendPropertyChanged("maPlaylist");
+					this.OnmaPlaylistChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenCaSi", DbType="NVarChar(50)")]
-		public string tenCaSi
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenPlaylist", DbType="NVarChar(50)")]
+		public string tenPlaylist
 		{
 			get
 			{
-				return this._tenCaSi;
+				return this._tenPlaylist;
 			}
 			set
 			{
-				if ((this._tenCaSi != value))
+				if ((this._tenPlaylist != value))
 				{
-					this.OntenCaSiChanging(value);
+					this.OntenPlaylistChanging(value);
 					this.SendPropertyChanging();
-					this._tenCaSi = value;
-					this.SendPropertyChanged("tenCaSi");
-					this.OntenCaSiChanged();
+					this._tenPlaylist = value;
+					this.SendPropertyChanged("tenPlaylist");
+					this.OntenPlaylistChanged();
 				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Playlist_BaiHatVaPlayList", Storage="_BaiHatVaPlayLists", ThisKey="maPlaylist", OtherKey="maPlaylist")]
+		public EntitySet<BaiHatVaPlayList> BaiHatVaPlayLists
+		{
+			get
+			{
+				return this._BaiHatVaPlayLists;
+			}
+			set
+			{
+				this._BaiHatVaPlayLists.Assign(value);
 			}
 		}
 		
@@ -634,6 +691,18 @@ namespace DAL_BLL
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_BaiHatVaPlayLists(BaiHatVaPlayList entity)
+		{
+			this.SendPropertyChanging();
+			entity.Playlist = this;
+		}
+		
+		private void detach_BaiHatVaPlayLists(BaiHatVaPlayList entity)
+		{
+			this.SendPropertyChanging();
+			entity.Playlist = null;
 		}
 	}
 }
