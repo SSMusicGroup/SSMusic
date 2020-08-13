@@ -103,6 +103,7 @@ namespace MusicPlayer
                     return;
                 }
                 axWMP_main.settings.autoStart = true;
+                             
                 axWMP_main.URL = Filepath[playListIndex];
                 lbox_ListNhac.SelectedIndex = playListIndex;
                 lbl_Name_Song.Text = lbox_ListNhac.SelectedItem.ToString();
@@ -349,14 +350,21 @@ namespace MusicPlayer
         private void dgvBaiHat_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             string m = dgvBaiHat.SelectedCells[0].Value.ToString();
-            Filepath = new string[1];
-            Filepath[0] = daBH.getPathBaiHat(m);
-            lbox_ListNhac.Items.Clear();
-            lbox_ListNhac.Items.Add(m);
-            Startindex = 0;
-            playfile(0);
-            lbox_ListNhac.BringToFront();
+            if (System.IO.File.Exists(daBH.getPathBaiHat(m)))
+            {
+                Filepath = new string[1];
+                Filepath[0] = daBH.getPathBaiHat(m);
+                lbox_ListNhac.Items.Clear();
+                lbox_ListNhac.Items.Add(m);
+                Startindex = 0;
+                playfile(0);
+                lbox_ListNhac.BringToFront();
+            }
+            else
+            {
 
+                MessageBox.Show("Bài hát đã bị xóa hoặc di chuyển ra khỏi thư mục");
+            }
         }
 
         private void lbox_ListNhac_SelectedIndexChanged(object sender, EventArgs e)
@@ -377,8 +385,16 @@ namespace MusicPlayer
                     for (int i = 0; i < dgvBaiHat.RowCount; i++)
                     {
                         string m = dgvBaiHat.Rows[i].Cells[0].Value.ToString();
-                        Filepath[i] = daBH.getPathBaiHat(m);
-                        lbox_ListNhac.Items.Add(m);
+                        if (System.IO.File.Exists(daBH.getPathBaiHat(m)))
+                        {
+                            Filepath[i] = daBH.getPathBaiHat(m);
+                            lbox_ListNhac.Items.Add(m);
+                        }
+                        else
+                        {
+
+                            MessageBox.Show("Bài hát đã bị xóa hoặc di chuyển ra khỏi thư mục");
+                        }
                     }
                     Startindex = 0;
                     playfile(0);
@@ -398,14 +414,24 @@ namespace MusicPlayer
             try
             {
                 Filepath = new string[dgvBaiHat.SelectedRows.Count];
+                int indexVitri = 0;
                 lbox_ListNhac.Items.Clear();
                 foreach (DataGridViewRow row in dgvBaiHat.SelectedRows)
                 {
                     if (!row.IsNewRow)
                     {
                         string m = dgvBaiHat.Rows[row.Index].Cells[0].Value.ToString();
-                        Filepath[row.Index] = daBH.getPathBaiHat(m);
-                        lbox_ListNhac.Items.Add(m);
+                        if (System.IO.File.Exists(daBH.getPathBaiHat(m)))
+                        {
+                            Filepath[indexVitri] = daBH.getPathBaiHat(m);
+                            indexVitri++;
+                            lbox_ListNhac.Items.Add(m);
+                        }
+                        else
+                        {
+
+                            MessageBox.Show("Bài hát đã bị xóa hoặc di chuyển ra khỏi thư mục");
+                        }
                     }
                 }
                 Startindex = 0;
@@ -431,8 +457,16 @@ namespace MusicPlayer
                     for (int i = 0; i < dgvCaSi.RowCount; i++)
                     {
                         string m = dgvCaSi.Rows[i].Cells[0].Value.ToString();
-                        Filepath[i] = daBH.getPathBaiHat(m);
-                        lbox_ListNhac.Items.Add(m);
+                        if (System.IO.File.Exists(daBH.getPathBaiHat(m)))
+                        {
+                            Filepath[i] = daBH.getPathBaiHat(m);
+                            lbox_ListNhac.Items.Add(m);
+                        }
+                        else
+                        {
+
+                            MessageBox.Show("Bài hát đã bị xóa hoặc di chuyển ra khỏi thư mục");
+                        }
                     }
                     Startindex = 0;
                     playfile(0);
@@ -459,8 +493,16 @@ namespace MusicPlayer
                     for (int i = 0; i < dgvPlaylist.RowCount; i++)
                     {
                         string m = dgvPlaylist.Rows[i].Cells[0].Value.ToString();
-                        Filepath[i] = daBH.getPathBaiHat(m);
-                        lbox_ListNhac.Items.Add(m);
+                        if (System.IO.File.Exists(daBH.getPathBaiHat(m)))
+                        {
+                            Filepath[i] = daBH.getPathBaiHat(m);
+                            lbox_ListNhac.Items.Add(m);
+                        }
+                        else
+                        {
+
+                            MessageBox.Show("Bài hát đã bị xóa hoặc di chuyển ra khỏi thư mục");
+                        }
                     }
                     Startindex = 0;
                     playfile(0);
@@ -481,14 +523,24 @@ namespace MusicPlayer
             try
             {
                 Filepath = new string[dgvCaSi.SelectedRows.Count];
+                int indexVitri = 0;
                 lbox_ListNhac.Items.Clear();
                 foreach (DataGridViewRow row in dgvCaSi.SelectedRows)
                 {
                     if (!row.IsNewRow)
                     {
                         string m = dgvCaSi.Rows[row.Index].Cells[0].Value.ToString();
-                        Filepath[row.Index] = daBH.getPathBaiHat(m);
-                        lbox_ListNhac.Items.Add(m);
+                        if (System.IO.File.Exists(daBH.getPathBaiHat(m)))
+                        {
+                            Filepath[indexVitri] = daBH.getPathBaiHat(m);
+                            indexVitri++;
+                            lbox_ListNhac.Items.Add(m);
+                        }
+                        else
+                        {
+
+                            MessageBox.Show("Bài hát đã bị xóa hoặc di chuyển ra khỏi thư mục");
+                        }
                     }
                 }
                 Startindex = 0;
@@ -507,14 +559,24 @@ namespace MusicPlayer
             try
             {
                 Filepath = new string[dgvPlaylist.SelectedRows.Count];
+                int indexVitri = 0;
                 lbox_ListNhac.Items.Clear();
                 foreach (DataGridViewRow row in dgvPlaylist.SelectedRows)
                 {
                     if (!row.IsNewRow)
                     {
                         string m = dgvPlaylist.Rows[row.Index].Cells[0].Value.ToString();
-                        Filepath[row.Index] = daBH.getPathBaiHat(m);
-                        lbox_ListNhac.Items.Add(m);
+                        if (System.IO.File.Exists(daBH.getPathBaiHat(m)))
+                        {
+                            Filepath[indexVitri] = daBH.getPathBaiHat(m);
+                            indexVitri++;
+                            lbox_ListNhac.Items.Add(m);
+                        }
+                        else
+                        {
+
+                            MessageBox.Show("Bài hát đã bị xóa hoặc di chuyển ra khỏi thư mục");
+                        }
                     }
                 }
                 Startindex = 0;
@@ -569,25 +631,41 @@ namespace MusicPlayer
         private void dgvCaSi_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             string m = dgvCaSi.SelectedCells[0].Value.ToString();
-            Filepath = new string[1];
-            Filepath[0] = daBH.getPathBaiHat(m);
-            lbox_ListNhac.Items.Clear();
-            lbox_ListNhac.Items.Add(m);
-            Startindex = 0;
-            playfile(0);
-            lbox_ListNhac.BringToFront();
+            if (System.IO.File.Exists(daBH.getPathBaiHat(m)))
+            {
+                Filepath = new string[1];
+                Filepath[0] = daBH.getPathBaiHat(m);
+                lbox_ListNhac.Items.Clear();
+                lbox_ListNhac.Items.Add(m);
+                Startindex = 0;
+                playfile(0);
+                lbox_ListNhac.BringToFront();
+            }
+            else
+            {
+
+                MessageBox.Show("Bài hát đã bị xóa hoặc di chuyển ra khỏi thư mục");
+            }
         }
 
         private void dgvPlaylist_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             string m = dgvPlaylist.SelectedCells[0].Value.ToString();
-            Filepath = new string[1];
-            Filepath[0] = daBH.getPathBaiHat(m);
-            lbox_ListNhac.Items.Clear();
-            lbox_ListNhac.Items.Add(m);
-            Startindex = 0;
-            playfile(0);
-            lbox_ListNhac.BringToFront();
+            if (System.IO.File.Exists(daBH.getPathBaiHat(m)))
+            {
+                Filepath = new string[1];
+                Filepath[0] = daBH.getPathBaiHat(m);
+                lbox_ListNhac.Items.Clear();
+                lbox_ListNhac.Items.Add(m);
+                Startindex = 0;
+                playfile(0);
+                lbox_ListNhac.BringToFront();
+            }
+            else
+            {
+
+                MessageBox.Show("Bài hát đã bị xóa hoặc di chuyển ra khỏi thư mục");
+            }
         }
 
         private void dgvBaiHat_MouseDown(object sender, MouseEventArgs e)

@@ -52,10 +52,24 @@ namespace DAL_BLL
         }
         public void setBaiHat(string tenBH, string pathName)
         {
-            BaiHat bh = new BaiHat();
-            int count = da.BaiHats.Select(k => k).ToList().Count + 1;
 
-            bh.maBaiHat = "BH00" + count;
+            List<BaiHat> bh2 = da.BaiHats.Select(k => k).ToList();
+            int[] chuoisoint = new int[bh2.Count()];
+            for (int i = 0; i < bh2.Count(); i ++)
+            {
+                string m = bh2[i].maBaiHat;
+                chuoisoint[i] = int.Parse(m.Substring(2));
+            }
+            int max = chuoisoint[0];
+            for (int j = 1; j < bh2.Count(); j++)
+            {
+                if (chuoisoint[j] > max)
+                    max = chuoisoint[j];
+            }
+
+            BaiHat bh = new BaiHat();
+
+            bh.maBaiHat = "BH"+max;
             bh.tenBaiHat = tenBH;
             bh.maCaSi = null;
             bh.pathBaiHat = pathName;
@@ -71,7 +85,6 @@ namespace DAL_BLL
 
             da.SubmitChanges();
         }
-
 
     }
 }

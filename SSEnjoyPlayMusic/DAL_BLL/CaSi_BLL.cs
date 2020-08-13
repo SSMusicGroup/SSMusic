@@ -39,9 +39,23 @@ namespace DAL_BLL
 
         public void addCaSi(string tenCS)
         {
+            List<CaSi> cs2 = da.CaSis.Select(k => k).ToList();
+            int[] chuoisoint = new int[cs2.Count()];
+            for (int i = 0; i < cs2.Count(); i++)
+            {
+                string m = cs2[i].maCaSi;
+                chuoisoint[i] = int.Parse(m.Substring(2));
+            }
+            int max = chuoisoint[0];
+            for (int j = 1; j < cs2.Count(); j++)
+            {
+                if (chuoisoint[j] > max)
+                    max = chuoisoint[j];
+            }
+
+
             CaSi cs = new CaSi();
-            int count = da.CaSis.Select(k => k).ToList().Count + 1;
-            cs.maCaSi = "CS00" + count;
+            cs.maCaSi = "CS" + max;
             cs.tenCaSi = tenCS;
 
             da.CaSis.InsertOnSubmit(cs);
