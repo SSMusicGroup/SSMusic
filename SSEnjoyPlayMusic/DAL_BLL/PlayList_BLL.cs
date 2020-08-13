@@ -22,5 +22,41 @@ namespace DAL_BLL
             var ds = from a in da.BaiHatVaPlayLists join b in da.BaiHats on a.maBaiHat equals b.maBaiHat where a.maPlaylist == maPlaylist select new { b.tenBaiHat};
             return ds;
         }
+
+        public bool check_PlayList_DaTonTai(string tenPL)
+        {
+            if (da.Playlists.Where(t => t.tenPlaylist == tenPL).FirstOrDefault() == null)
+                return false;
+            return true;
+        }
+
+        public void addPlayList(string tenPL)
+        {
+            Playlist pl = new Playlist();
+            int count = da.Playlists.Select(k => k).ToList().Count + 1;
+            pl.maPlaylist = "PL00" + count;
+            pl.tenPlaylist = tenPL;
+
+            da.Playlists.InsertOnSubmit(pl);
+            da.SubmitChanges();
+        }
+
+        public void addBaiHatByPlayList(string mapl, string mabh)
+        {
+            BaiHatVaPlayList bh = new BaiHatVaPlayList();
+
+            bh.maPlaylist = mapl;
+            bh.maBaiHat = mabh;
+
+            da.BaiHatVaPlayLists.InsertOnSubmit(bh);
+            da.SubmitChanges();
+        }
+
+        public bool check_BH_in_PL_tonTai(string mabh, string mapl)
+        {
+            if (da.BaiHatVaPlayLists.Where(t => t.maBaiHat == mabh).SingleOrDefault() == null && da.BaiHatVaPlayLists.Where(t => t.maPlaylist == mapl).SingleOrDefault() == null)
+                return false;
+            return true;
+        }
     }
 }

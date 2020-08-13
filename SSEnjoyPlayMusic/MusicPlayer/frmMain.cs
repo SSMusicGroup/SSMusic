@@ -81,6 +81,8 @@ namespace MusicPlayer
             StopPlayer();
             bunifuSlider1.Value = 100;
             loadCbo_CaSi();
+            loadCbo_BaiHat_In_CaSi();
+            loadCbo_BHinPL();
         }
 
         public void StopPlayer()
@@ -591,6 +593,66 @@ namespace MusicPlayer
         private void dgvBaiHat_MouseDown(object sender, MouseEventArgs e)
         {
 
+        }
+
+        private void btn_Them_CaSi_Click(object sender, EventArgs e)
+        {
+            if (daCS.check_CaSi_DaTonTai(txt_Them_Casi.Text) == false)
+            {
+                daCS.addCaSi(txt_Them_Casi.Text);
+                MessageBox.Show("Thêm tên ca sĩ thành công");
+                cbo_CaSi.Refresh();
+                cbo_CaSi.DataSource = daCS.getDSCaSi();
+            }
+            txt_Them_Casi.Text = "";
+        }
+
+        private void btn_Them_baiHatByCaSi_Click(object sender, EventArgs e)
+        {
+            string macs = cbo_CaSi.SelectedValue.ToString();
+            string mabh = cbo_baiHat_CaSi.SelectedValue.ToString();
+
+            daBH.themCaSiinBaiHat(mabh, macs);
+            MessageBox.Show("Thêm bài hát cho ca sĩ thành công!");
+            dgvCaSi.Refresh();
+            dgvCaSi.DataSource = daCS.getDSBaiHatByCaSi(macs);
+        }
+
+        public void loadCbo_BaiHat_In_CaSi()
+        {
+            cbo_baiHat_CaSi.DataSource = daBH.layDSBaiHat();
+            cbo_baiHat_CaSi.DisplayMember = "tenBaiHat";
+            cbo_baiHat_CaSi.ValueMember = "maBaiHat";
+        }
+
+        private void btn_Them_BHinPL_Click(object sender, EventArgs e)
+        {
+            if (daPL.check_BH_in_PL_tonTai(cbo_BaiHat_PL.SelectedValue.ToString(), cboPlayList.SelectedValue.ToString()) == false)
+            {
+                daPL.addBaiHatByPlayList(cboPlayList.SelectedValue.ToString(), cbo_BaiHat_PL.SelectedValue.ToString());
+                MessageBox.Show("Thêm thành công");
+                dgvPlaylist.Refresh();
+                dgvPlaylist.DataSource = daPL.getDSBaiHatCuaPLaylist(cboPlayList.SelectedValue.ToString());
+            }
+        }
+
+        private void btn_Them_Playlist_Click(object sender, EventArgs e)
+        {
+            if (daPL.check_PlayList_DaTonTai(txt_Them_PL.Text) == false)
+            {
+                daPL.addPlayList(txt_Them_PL.Text);
+                MessageBox.Show("Thêm tên playlist thành công");
+                cboPlayList.Refresh();
+                cboPlayList.DataSource = daPL.getDSPlayList();
+            }
+            txt_Them_PL.Text = "";
+        }
+
+        public void loadCbo_BHinPL()
+        {
+            cbo_BaiHat_PL.DataSource = daBH.layDSBaiHat();
+            cbo_BaiHat_PL.DisplayMember = "tenBaiHat";
+            cbo_BaiHat_PL.ValueMember = "maBaiHat";
         }
 
         private void btn_Browser_Click(object sender, EventArgs e)

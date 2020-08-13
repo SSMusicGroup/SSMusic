@@ -18,6 +18,11 @@ namespace DAL_BLL
             return bh;
         }
 
+        public List<BaiHat> layDSBaiHat()
+        {
+            return da.BaiHats.Select(k => k).ToList();
+        }
+
         public IQueryable getDSBaiHatByCaSi(string maCaSi)
         {
             var bh = from t in da.BaiHats where t.maCaSi == maCaSi select new { t.maBaiHat, t.tenBaiHat, t.maCaSi };
@@ -58,5 +63,15 @@ namespace DAL_BLL
             da.BaiHats.InsertOnSubmit(bh);
             da.SubmitChanges();
         }
+
+        public void themCaSiinBaiHat(string mabh, string macs)
+        {
+            BaiHat bh = da.BaiHats.Where(t => t.maBaiHat == mabh).SingleOrDefault();
+            bh.maCaSi = macs;
+
+            da.SubmitChanges();
+        }
+
+
     }
 }
