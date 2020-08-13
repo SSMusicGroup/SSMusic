@@ -597,6 +597,11 @@ namespace MusicPlayer
 
         private void btn_Them_CaSi_Click(object sender, EventArgs e)
         {
+            if(txt_Them_Casi.Text =="")
+            {
+                MessageBox.Show("Tên ca sĩ không được để trống.");
+                return;
+            }
             if (daCS.check_CaSi_DaTonTai(txt_Them_Casi.Text) == false)
             {
                 daCS.addCaSi(txt_Them_Casi.Text);
@@ -627,17 +632,26 @@ namespace MusicPlayer
 
         private void btn_Them_BHinPL_Click(object sender, EventArgs e)
         {
-            if (daPL.check_BH_in_PL_tonTai(cbo_BaiHat_PL.SelectedValue.ToString(), cboPlayList.SelectedValue.ToString()) == false)
+            if (daPL.check_BH_in_PL_tonTai(cbo_BaiHat_PL.SelectedValue.ToString(), cboPlayList.SelectedValue.ToString()) == true)
             {
                 daPL.addBaiHatByPlayList(cboPlayList.SelectedValue.ToString(), cbo_BaiHat_PL.SelectedValue.ToString());
                 MessageBox.Show("Thêm thành công");
                 dgvPlaylist.Refresh();
                 dgvPlaylist.DataSource = daPL.getDSBaiHatCuaPLaylist(cboPlayList.SelectedValue.ToString());
             }
+            else
+            {
+                MessageBox.Show("Đã tồn tại.");
+            }
         }
 
         private void btn_Them_Playlist_Click(object sender, EventArgs e)
         {
+            if (txt_Them_PL.Text == "")
+            {
+                MessageBox.Show("Tên PLaylist không được để trống.");
+                return;
+            }
             if (daPL.check_PlayList_DaTonTai(txt_Them_PL.Text) == false)
             {
                 daPL.addPlayList(txt_Them_PL.Text);

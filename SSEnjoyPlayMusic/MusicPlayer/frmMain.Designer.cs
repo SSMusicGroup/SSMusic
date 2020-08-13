@@ -66,6 +66,9 @@
             this.btn_AmLuong = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gbPLaylist = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_Them_BHinPL = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.cbo_BaiHat_PL = new System.Windows.Forms.ComboBox();
             this.btn_Them_Playlist = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txt_Them_PL = new System.Windows.Forms.TextBox();
             this.btnPhat_PLaylist = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -84,7 +87,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_Them_baiHatByCaSi = new Bunifu.Framework.UI.BunifuFlatButton();
             this.cbo_baiHat_CaSi = new System.Windows.Forms.ComboBox();
-            this.btn_Them_CaSi = new System.Windows.Forms.Button();
             this.txt_Them_Casi = new System.Windows.Forms.TextBox();
             this.btnPhat_CaSi = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnPhatAll_CaSi = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -114,9 +116,7 @@
             this.thêmTênCaSĩToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmBàiHátVàoPlaylistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cbo_BaiHat_PL = new System.Windows.Forms.ComboBox();
-            this.btn_Them_BHinPL = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_Them_CaSi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -138,6 +138,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_AmLuong)).BeginInit();
             this.panel1.SuspendLayout();
             this.gbPLaylist.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlaylist)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWMP_main)).BeginInit();
             this.gbBaihat.SuspendLayout();
@@ -156,14 +157,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).BeginInit();
             this.menuBaiHat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // axWindowsMediaPlayer1
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
             this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(200, 0);
-            this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(698, 382);
@@ -179,11 +179,11 @@
             this.tableLayoutPanel1.Controls.Add(this.pn_menu, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(997, 574);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(748, 466);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // tableLayoutPanel2
@@ -193,13 +193,13 @@
             this.tableLayoutPanel2.Controls.Add(this.bunifuGradientPanel1, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(302, 2);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(226, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(692, 570);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(520, 462);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // bunifuGradientPanel1
@@ -212,11 +212,11 @@
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.DarkCyan;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(3, 372);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(2, 302);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(686, 196);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(516, 158);
             this.bunifuGradientPanel1.TabIndex = 2;
             // 
             // tableLayoutPanel7
@@ -230,14 +230,14 @@
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel10, 0, 2);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 4;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(686, 196);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(516, 158);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
             // PB_Timer
@@ -245,12 +245,12 @@
             this.PB_Timer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.PB_Timer.BackColor = System.Drawing.Color.Silver;
             this.PB_Timer.BorderRadius = 5;
-            this.PB_Timer.Location = new System.Drawing.Point(5, 8);
-            this.PB_Timer.Margin = new System.Windows.Forms.Padding(5);
+            this.PB_Timer.Location = new System.Drawing.Point(4, 6);
+            this.PB_Timer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PB_Timer.MaximumValue = 100;
             this.PB_Timer.Name = "PB_Timer";
             this.PB_Timer.ProgressColor = System.Drawing.Color.Teal;
-            this.PB_Timer.Size = new System.Drawing.Size(676, 12);
+            this.PB_Timer.Size = new System.Drawing.Size(508, 10);
             this.PB_Timer.TabIndex = 0;
             this.PB_Timer.Value = 100;
             // 
@@ -263,12 +263,12 @@
             this.tableLayoutPanel8.Controls.Add(this.lbl_time_start, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.lbl_time_end, 2, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 31);
-            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(2, 25);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(680, 35);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(512, 27);
             this.tableLayoutPanel8.TabIndex = 1;
             // 
             // lbl_time_start
@@ -276,9 +276,10 @@
             this.lbl_time_start.AutoSize = true;
             this.lbl_time_start.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_time_start.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_time_start.Location = new System.Drawing.Point(3, 0);
+            this.lbl_time_start.Location = new System.Drawing.Point(2, 0);
+            this.lbl_time_start.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_time_start.Name = "lbl_time_start";
-            this.lbl_time_start.Size = new System.Drawing.Size(61, 35);
+            this.lbl_time_start.Size = new System.Drawing.Size(47, 27);
             this.lbl_time_start.TabIndex = 0;
             this.lbl_time_start.Text = "00:00";
             // 
@@ -287,9 +288,10 @@
             this.lbl_time_end.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_time_end.AutoSize = true;
             this.lbl_time_end.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_time_end.Location = new System.Drawing.Point(627, 0);
+            this.lbl_time_end.Location = new System.Drawing.Point(466, 0);
+            this.lbl_time_end.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_time_end.Name = "lbl_time_end";
-            this.lbl_time_end.Size = new System.Drawing.Size(50, 20);
+            this.lbl_time_end.Size = new System.Drawing.Size(44, 17);
             this.lbl_time_end.TabIndex = 1;
             this.lbl_time_end.Text = "00:00";
             // 
@@ -305,7 +307,7 @@
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tableLayoutPanel9.Controls.Add(this.panel3, 4, 0);
             this.tableLayoutPanel9.Controls.Add(this.btn_Action, 3, 0);
             this.tableLayoutPanel9.Controls.Add(this.ImgBtnRanDom, 1, 0);
@@ -313,12 +315,12 @@
             this.tableLayoutPanel9.Controls.Add(this.IgmBtnRepeat, 6, 0);
             this.tableLayoutPanel9.Controls.Add(this.panel2, 2, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 128);
-            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(2, 103);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(680, 66);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(512, 53);
             this.tableLayoutPanel9.TabIndex = 3;
             // 
             // panel3
@@ -326,10 +328,10 @@
             this.panel3.Controls.Add(this.btn_next_song);
             this.panel3.Controls.Add(this.play);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(345, 2);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(258, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(59, 62);
+            this.panel3.Size = new System.Drawing.Size(45, 49);
             this.panel3.TabIndex = 7;
             // 
             // btn_next_song
@@ -339,9 +341,9 @@
             this.btn_next_song.Image = global::MusicPlayer.Properties.Resources.next;
             this.btn_next_song.ImageActive = null;
             this.btn_next_song.Location = new System.Drawing.Point(0, 0);
-            this.btn_next_song.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_next_song.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_next_song.Name = "btn_next_song";
-            this.btn_next_song.Size = new System.Drawing.Size(59, 62);
+            this.btn_next_song.Size = new System.Drawing.Size(45, 49);
             this.btn_next_song.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_next_song.TabIndex = 2;
             this.btn_next_song.TabStop = false;
@@ -353,10 +355,10 @@
             this.play.BackColor = System.Drawing.Color.Transparent;
             this.play.Image = global::MusicPlayer.Properties.Resources.pause_100px;
             this.play.ImageActive = null;
-            this.play.Location = new System.Drawing.Point(3, 10);
-            this.play.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.play.Location = new System.Drawing.Point(2, 8);
+            this.play.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.play.Name = "play";
-            this.play.Size = new System.Drawing.Size(49, 41);
+            this.play.Size = new System.Drawing.Size(37, 33);
             this.play.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.play.TabIndex = 1;
             this.play.TabStop = false;
@@ -369,10 +371,10 @@
             this.btn_Action.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Action.Image = global::MusicPlayer.Properties.Resources.pause_100px;
             this.btn_Action.ImageActive = null;
-            this.btn_Action.Location = new System.Drawing.Point(275, 2);
-            this.btn_Action.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Action.Location = new System.Drawing.Point(206, 2);
+            this.btn_Action.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Action.Name = "btn_Action";
-            this.btn_Action.Size = new System.Drawing.Size(64, 62);
+            this.btn_Action.Size = new System.Drawing.Size(48, 49);
             this.btn_Action.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_Action.TabIndex = 0;
             this.btn_Action.TabStop = false;
@@ -385,10 +387,10 @@
             this.ImgBtnRanDom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ImgBtnRanDom.Image = global::MusicPlayer.Properties.Resources.shuffle_100px;
             this.ImgBtnRanDom.ImageActive = null;
-            this.ImgBtnRanDom.Location = new System.Drawing.Point(139, 2);
-            this.ImgBtnRanDom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ImgBtnRanDom.Location = new System.Drawing.Point(104, 2);
+            this.ImgBtnRanDom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ImgBtnRanDom.Name = "ImgBtnRanDom";
-            this.ImgBtnRanDom.Size = new System.Drawing.Size(62, 62);
+            this.ImgBtnRanDom.Size = new System.Drawing.Size(47, 49);
             this.ImgBtnRanDom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImgBtnRanDom.TabIndex = 3;
             this.ImgBtnRanDom.TabStop = false;
@@ -401,10 +403,10 @@
             this.btn_Stop_song.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Stop_song.Image = global::MusicPlayer.Properties.Resources.stop_100px;
             this.btn_Stop_song.ImageActive = null;
-            this.btn_Stop_song.Location = new System.Drawing.Point(410, 2);
-            this.btn_Stop_song.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Stop_song.Location = new System.Drawing.Point(307, 2);
+            this.btn_Stop_song.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Stop_song.Name = "btn_Stop_song";
-            this.btn_Stop_song.Size = new System.Drawing.Size(62, 62);
+            this.btn_Stop_song.Size = new System.Drawing.Size(47, 49);
             this.btn_Stop_song.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_Stop_song.TabIndex = 4;
             this.btn_Stop_song.TabStop = false;
@@ -417,10 +419,10 @@
             this.IgmBtnRepeat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.IgmBtnRepeat.Image = global::MusicPlayer.Properties.Resources.available_updates_100px;
             this.IgmBtnRepeat.ImageActive = null;
-            this.IgmBtnRepeat.Location = new System.Drawing.Point(478, 2);
-            this.IgmBtnRepeat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.IgmBtnRepeat.Location = new System.Drawing.Point(358, 2);
+            this.IgmBtnRepeat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.IgmBtnRepeat.Name = "IgmBtnRepeat";
-            this.IgmBtnRepeat.Size = new System.Drawing.Size(62, 62);
+            this.IgmBtnRepeat.Size = new System.Drawing.Size(47, 49);
             this.IgmBtnRepeat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.IgmBtnRepeat.TabIndex = 5;
             this.IgmBtnRepeat.TabStop = false;
@@ -432,10 +434,10 @@
             this.panel2.Controls.Add(this.btn_back_Song);
             this.panel2.Controls.Add(this.pause);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(207, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(155, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(62, 62);
+            this.panel2.Size = new System.Drawing.Size(47, 49);
             this.panel2.TabIndex = 6;
             // 
             // btn_back_Song
@@ -445,9 +447,9 @@
             this.btn_back_Song.Image = global::MusicPlayer.Properties.Resources.back_to_100px;
             this.btn_back_Song.ImageActive = null;
             this.btn_back_Song.Location = new System.Drawing.Point(0, 0);
-            this.btn_back_Song.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_back_Song.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_back_Song.Name = "btn_back_Song";
-            this.btn_back_Song.Size = new System.Drawing.Size(62, 62);
+            this.btn_back_Song.Size = new System.Drawing.Size(47, 49);
             this.btn_back_Song.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_back_Song.TabIndex = 1;
             this.btn_back_Song.TabStop = false;
@@ -459,10 +461,10 @@
             this.pause.BackColor = System.Drawing.Color.Transparent;
             this.pause.Image = global::MusicPlayer.Properties.Resources.play_100px;
             this.pause.ImageActive = null;
-            this.pause.Location = new System.Drawing.Point(0, 7);
-            this.pause.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pause.Location = new System.Drawing.Point(0, 6);
+            this.pause.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pause.Name = "pause";
-            this.pause.Size = new System.Drawing.Size(59, 44);
+            this.pause.Size = new System.Drawing.Size(44, 36);
             this.pause.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pause.TabIndex = 1;
             this.pause.TabStop = false;
@@ -481,21 +483,22 @@
             this.tableLayoutPanel10.Controls.Add(this.lbl_AmLuong, 3, 0);
             this.tableLayoutPanel10.Controls.Add(this.btn_AmLuong, 1, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 70);
-            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(2, 56);
+            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(680, 54);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(512, 43);
             this.tableLayoutPanel10.TabIndex = 4;
             // 
             // lbl_Name_Song
             // 
             this.lbl_Name_Song.AutoSize = true;
             this.lbl_Name_Song.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Name_Song.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Name_Song.Location = new System.Drawing.Point(2, 0);
+            this.lbl_Name_Song.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Name_Song.Name = "lbl_Name_Song";
-            this.lbl_Name_Song.Size = new System.Drawing.Size(104, 23);
+            this.lbl_Name_Song.Size = new System.Drawing.Size(84, 19);
             this.lbl_Name_Song.TabIndex = 0;
             this.lbl_Name_Song.Text = "Tên bài hát";
             // 
@@ -506,11 +509,11 @@
             this.bunifuSlider1.BackgroudColor = System.Drawing.Color.DarkGray;
             this.bunifuSlider1.BorderRadius = 0;
             this.bunifuSlider1.IndicatorColor = System.Drawing.Color.Tomato;
-            this.bunifuSlider1.Location = new System.Drawing.Point(467, 9);
-            this.bunifuSlider1.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuSlider1.Location = new System.Drawing.Point(351, 6);
+            this.bunifuSlider1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuSlider1.MaximumValue = 100;
             this.bunifuSlider1.Name = "bunifuSlider1";
-            this.bunifuSlider1.Size = new System.Drawing.Size(160, 35);
+            this.bunifuSlider1.Size = new System.Drawing.Size(120, 30);
             this.bunifuSlider1.TabIndex = 1;
             this.bunifuSlider1.Value = 0;
             this.bunifuSlider1.ValueChanged += new System.EventHandler(this.bunifuSlider1_ValueChanged);
@@ -520,9 +523,10 @@
             this.lbl_AmLuong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_AmLuong.AutoSize = true;
             this.lbl_AmLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_AmLuong.Location = new System.Drawing.Point(635, 15);
+            this.lbl_AmLuong.Location = new System.Drawing.Point(477, 12);
+            this.lbl_AmLuong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_AmLuong.Name = "lbl_AmLuong";
-            this.lbl_AmLuong.Size = new System.Drawing.Size(42, 24);
+            this.lbl_AmLuong.Size = new System.Drawing.Size(33, 18);
             this.lbl_AmLuong.TabIndex = 2;
             this.lbl_AmLuong.Text = "100";
             // 
@@ -532,10 +536,10 @@
             this.btn_AmLuong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_AmLuong.Image = global::MusicPlayer.Properties.Resources.audio_100px;
             this.btn_AmLuong.ImageActive = null;
-            this.btn_AmLuong.Location = new System.Drawing.Point(397, 2);
-            this.btn_AmLuong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_AmLuong.Location = new System.Drawing.Point(298, 2);
+            this.btn_AmLuong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_AmLuong.Name = "btn_AmLuong";
-            this.btn_AmLuong.Size = new System.Drawing.Size(62, 50);
+            this.btn_AmLuong.Size = new System.Drawing.Size(47, 39);
             this.btn_AmLuong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_AmLuong.TabIndex = 3;
             this.btn_AmLuong.TabStop = false;
@@ -550,10 +554,10 @@
             this.panel1.Controls.Add(this.lbox_ListNhac);
             this.panel1.Controls.Add(this.gbCaSi);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(686, 366);
+            this.panel1.Size = new System.Drawing.Size(516, 296);
             this.panel1.TabIndex = 3;
             // 
             // gbPLaylist
@@ -569,12 +573,69 @@
             this.gbPLaylist.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbPLaylist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.gbPLaylist.Location = new System.Drawing.Point(0, 0);
-            this.gbPLaylist.Margin = new System.Windows.Forms.Padding(4);
             this.gbPLaylist.Name = "gbPLaylist";
-            this.gbPLaylist.Padding = new System.Windows.Forms.Padding(4);
-            this.gbPLaylist.Size = new System.Drawing.Size(686, 366);
+            this.gbPLaylist.Size = new System.Drawing.Size(516, 296);
             this.gbPLaylist.TabIndex = 3;
             this.gbPLaylist.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btn_Them_BHinPL);
+            this.groupBox2.Controls.Add(this.cbo_BaiHat_PL);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(242, 9);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(260, 106);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Thêm bài hát";
+            // 
+            // btn_Them_BHinPL
+            // 
+            this.btn_Them_BHinPL.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_Them_BHinPL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_Them_BHinPL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Them_BHinPL.BorderRadius = 0;
+            this.btn_Them_BHinPL.ButtonText = "Thêm";
+            this.btn_Them_BHinPL.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Them_BHinPL.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Them_BHinPL.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Them_BHinPL.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Them_BHinPL.Iconimage")));
+            this.btn_Them_BHinPL.Iconimage_right = null;
+            this.btn_Them_BHinPL.Iconimage_right_Selected = null;
+            this.btn_Them_BHinPL.Iconimage_Selected = null;
+            this.btn_Them_BHinPL.IconMarginLeft = 0;
+            this.btn_Them_BHinPL.IconMarginRight = 0;
+            this.btn_Them_BHinPL.IconRightVisible = true;
+            this.btn_Them_BHinPL.IconRightZoom = 0D;
+            this.btn_Them_BHinPL.IconVisible = true;
+            this.btn_Them_BHinPL.IconZoom = 90D;
+            this.btn_Them_BHinPL.IsTab = false;
+            this.btn_Them_BHinPL.Location = new System.Drawing.Point(7, 57);
+            this.btn_Them_BHinPL.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Them_BHinPL.Name = "btn_Them_BHinPL";
+            this.btn_Them_BHinPL.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_Them_BHinPL.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btn_Them_BHinPL.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Them_BHinPL.selected = false;
+            this.btn_Them_BHinPL.Size = new System.Drawing.Size(128, 29);
+            this.btn_Them_BHinPL.TabIndex = 11;
+            this.btn_Them_BHinPL.Text = "Thêm";
+            this.btn_Them_BHinPL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Them_BHinPL.Textcolor = System.Drawing.Color.White;
+            this.btn_Them_BHinPL.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Them_BHinPL.Click += new System.EventHandler(this.btn_Them_BHinPL_Click);
+            // 
+            // cbo_BaiHat_PL
+            // 
+            this.cbo_BaiHat_PL.FormattingEnabled = true;
+            this.cbo_BaiHat_PL.Location = new System.Drawing.Point(7, 27);
+            this.cbo_BaiHat_PL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbo_BaiHat_PL.Name = "cbo_BaiHat_PL";
+            this.cbo_BaiHat_PL.Size = new System.Drawing.Size(252, 25);
+            this.cbo_BaiHat_PL.TabIndex = 0;
             // 
             // btn_Them_Playlist
             // 
@@ -597,26 +658,27 @@
             this.btn_Them_Playlist.IconVisible = true;
             this.btn_Them_Playlist.IconZoom = 90D;
             this.btn_Them_Playlist.IsTab = false;
-            this.btn_Them_Playlist.Location = new System.Drawing.Point(71, 115);
-            this.btn_Them_Playlist.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_Them_Playlist.Location = new System.Drawing.Point(53, 93);
+            this.btn_Them_Playlist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Them_Playlist.Name = "btn_Them_Playlist";
             this.btn_Them_Playlist.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btn_Them_Playlist.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btn_Them_Playlist.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Them_Playlist.selected = false;
-            this.btn_Them_Playlist.Size = new System.Drawing.Size(179, 29);
+            this.btn_Them_Playlist.Size = new System.Drawing.Size(134, 24);
             this.btn_Them_Playlist.TabIndex = 10;
             this.btn_Them_Playlist.Text = "Thêm playlist";
-            this.btn_Them_Playlist.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Them_Playlist.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Them_Playlist.Textcolor = System.Drawing.Color.White;
             this.btn_Them_Playlist.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Them_Playlist.Click += new System.EventHandler(this.btn_Them_Playlist_Click);
             // 
             // txt_Them_PL
             // 
-            this.txt_Them_PL.Location = new System.Drawing.Point(5, 85);
+            this.txt_Them_PL.Location = new System.Drawing.Point(4, 69);
+            this.txt_Them_PL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_Them_PL.Name = "txt_Them_PL";
-            this.txt_Them_PL.Size = new System.Drawing.Size(309, 22);
+            this.txt_Them_PL.Size = new System.Drawing.Size(233, 20);
             this.txt_Them_PL.TabIndex = 9;
             // 
             // btnPhat_PLaylist
@@ -640,17 +702,17 @@
             this.btnPhat_PLaylist.IconVisible = true;
             this.btnPhat_PLaylist.IconZoom = 90D;
             this.btnPhat_PLaylist.IsTab = false;
-            this.btnPhat_PLaylist.Location = new System.Drawing.Point(164, 44);
-            this.btnPhat_PLaylist.Margin = new System.Windows.Forms.Padding(5);
+            this.btnPhat_PLaylist.Location = new System.Drawing.Point(123, 36);
+            this.btnPhat_PLaylist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPhat_PLaylist.Name = "btnPhat_PLaylist";
             this.btnPhat_PLaylist.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnPhat_PLaylist.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btnPhat_PLaylist.OnHoverTextColor = System.Drawing.Color.White;
             this.btnPhat_PLaylist.selected = false;
-            this.btnPhat_PLaylist.Size = new System.Drawing.Size(150, 33);
+            this.btnPhat_PLaylist.Size = new System.Drawing.Size(112, 27);
             this.btnPhat_PLaylist.TabIndex = 8;
             this.btnPhat_PLaylist.Text = "Phát";
-            this.btnPhat_PLaylist.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPhat_PLaylist.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPhat_PLaylist.Textcolor = System.Drawing.Color.White;
             this.btnPhat_PLaylist.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPhat_PLaylist.Click += new System.EventHandler(this.btnPhat_PLaylist_Click);
@@ -676,17 +738,17 @@
             this.btnPhatAll_PLaylist.IconVisible = true;
             this.btnPhatAll_PLaylist.IconZoom = 90D;
             this.btnPhatAll_PLaylist.IsTab = false;
-            this.btnPhatAll_PLaylist.Location = new System.Drawing.Point(5, 44);
-            this.btnPhatAll_PLaylist.Margin = new System.Windows.Forms.Padding(5);
+            this.btnPhatAll_PLaylist.Location = new System.Drawing.Point(4, 36);
+            this.btnPhatAll_PLaylist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPhatAll_PLaylist.Name = "btnPhatAll_PLaylist";
             this.btnPhatAll_PLaylist.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnPhatAll_PLaylist.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btnPhatAll_PLaylist.OnHoverTextColor = System.Drawing.Color.White;
             this.btnPhatAll_PLaylist.selected = false;
-            this.btnPhatAll_PLaylist.Size = new System.Drawing.Size(150, 33);
+            this.btnPhatAll_PLaylist.Size = new System.Drawing.Size(112, 27);
             this.btnPhatAll_PLaylist.TabIndex = 7;
             this.btnPhatAll_PLaylist.Text = "Phát tất cả";
-            this.btnPhatAll_PLaylist.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPhatAll_PLaylist.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPhatAll_PLaylist.Textcolor = System.Drawing.Color.White;
             this.btnPhatAll_PLaylist.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPhatAll_PLaylist.Click += new System.EventHandler(this.btnPhatAll_PLaylist_Click);
@@ -694,10 +756,9 @@
             // cboPlayList
             // 
             this.cboPlayList.FormattingEnabled = true;
-            this.cboPlayList.Location = new System.Drawing.Point(4, 11);
-            this.cboPlayList.Margin = new System.Windows.Forms.Padding(4);
+            this.cboPlayList.Location = new System.Drawing.Point(3, 9);
             this.cboPlayList.Name = "cboPlayList";
-            this.cboPlayList.Size = new System.Drawing.Size(310, 24);
+            this.cboPlayList.Size = new System.Drawing.Size(234, 21);
             this.cboPlayList.TabIndex = 5;
             this.cboPlayList.SelectedIndexChanged += new System.EventHandler(this.cboPlayList_SelectedIndexChanged);
             this.cboPlayList.SelectedValueChanged += new System.EventHandler(this.cboPlayList_SelectedValueChanged);
@@ -736,13 +797,12 @@
             this.dgvPlaylist.EnableHeadersVisualStyles = false;
             this.dgvPlaylist.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.dgvPlaylist.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvPlaylist.Location = new System.Drawing.Point(4, 148);
-            this.dgvPlaylist.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvPlaylist.Location = new System.Drawing.Point(3, 119);
             this.dgvPlaylist.Name = "dgvPlaylist";
             this.dgvPlaylist.ReadOnly = true;
             this.dgvPlaylist.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvPlaylist.RowHeadersVisible = false;
-            this.dgvPlaylist.Size = new System.Drawing.Size(678, 214);
+            this.dgvPlaylist.Size = new System.Drawing.Size(510, 174);
             this.dgvPlaylist.TabIndex = 4;
             this.dgvPlaylist.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPlaylist_CellMouseDoubleClick);
             // 
@@ -758,10 +818,10 @@
             this.axWMP_main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.axWMP_main.Enabled = true;
             this.axWMP_main.Location = new System.Drawing.Point(0, 0);
-            this.axWMP_main.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.axWMP_main.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.axWMP_main.Name = "axWMP_main";
             this.axWMP_main.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWMP_main.OcxState")));
-            this.axWMP_main.Size = new System.Drawing.Size(686, 366);
+            this.axWMP_main.Size = new System.Drawing.Size(516, 296);
             this.axWMP_main.TabIndex = 0;
             this.axWMP_main.Visible = false;
             this.axWMP_main.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.axWMP_main_PlayStateChange);
@@ -775,10 +835,8 @@
             this.gbBaihat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbBaihat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.gbBaihat.Location = new System.Drawing.Point(0, 0);
-            this.gbBaihat.Margin = new System.Windows.Forms.Padding(4);
             this.gbBaihat.Name = "gbBaihat";
-            this.gbBaihat.Padding = new System.Windows.Forms.Padding(4);
-            this.gbBaihat.Size = new System.Drawing.Size(686, 366);
+            this.gbBaihat.Size = new System.Drawing.Size(516, 296);
             this.gbBaihat.TabIndex = 6;
             this.gbBaihat.TabStop = false;
             // 
@@ -803,14 +861,14 @@
             this.btnPhatBaiHat.IconVisible = true;
             this.btnPhatBaiHat.IconZoom = 90D;
             this.btnPhatBaiHat.IsTab = false;
-            this.btnPhatBaiHat.Location = new System.Drawing.Point(353, 11);
-            this.btnPhatBaiHat.Margin = new System.Windows.Forms.Padding(5);
+            this.btnPhatBaiHat.Location = new System.Drawing.Point(265, 9);
+            this.btnPhatBaiHat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPhatBaiHat.Name = "btnPhatBaiHat";
             this.btnPhatBaiHat.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnPhatBaiHat.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btnPhatBaiHat.OnHoverTextColor = System.Drawing.Color.White;
             this.btnPhatBaiHat.selected = false;
-            this.btnPhatBaiHat.Size = new System.Drawing.Size(321, 59);
+            this.btnPhatBaiHat.Size = new System.Drawing.Size(241, 48);
             this.btnPhatBaiHat.TabIndex = 6;
             this.btnPhatBaiHat.Text = "Phát";
             this.btnPhatBaiHat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -839,14 +897,14 @@
             this.btnPhatAllBaiHat.IconVisible = true;
             this.btnPhatAllBaiHat.IconZoom = 90D;
             this.btnPhatAllBaiHat.IsTab = false;
-            this.btnPhatAllBaiHat.Location = new System.Drawing.Point(11, 11);
-            this.btnPhatAllBaiHat.Margin = new System.Windows.Forms.Padding(5);
+            this.btnPhatAllBaiHat.Location = new System.Drawing.Point(8, 9);
+            this.btnPhatAllBaiHat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPhatAllBaiHat.Name = "btnPhatAllBaiHat";
             this.btnPhatAllBaiHat.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnPhatAllBaiHat.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btnPhatAllBaiHat.OnHoverTextColor = System.Drawing.Color.White;
             this.btnPhatAllBaiHat.selected = false;
-            this.btnPhatAllBaiHat.Size = new System.Drawing.Size(321, 59);
+            this.btnPhatAllBaiHat.Size = new System.Drawing.Size(241, 48);
             this.btnPhatAllBaiHat.TabIndex = 5;
             this.btnPhatAllBaiHat.Text = "Phát tất cả";
             this.btnPhatAllBaiHat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -888,13 +946,12 @@
             this.dgvBaiHat.EnableHeadersVisualStyles = false;
             this.dgvBaiHat.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.dgvBaiHat.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvBaiHat.Location = new System.Drawing.Point(4, 86);
-            this.dgvBaiHat.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvBaiHat.Location = new System.Drawing.Point(3, 69);
             this.dgvBaiHat.Name = "dgvBaiHat";
             this.dgvBaiHat.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvBaiHat.RowHeadersVisible = false;
             this.dgvBaiHat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBaiHat.Size = new System.Drawing.Size(678, 276);
+            this.dgvBaiHat.Size = new System.Drawing.Size(510, 224);
             this.dgvBaiHat.TabIndex = 4;
             this.dgvBaiHat.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvBaiHat_CellMouseClick);
             this.dgvBaiHat.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvBaiHat_CellMouseDoubleClick);
@@ -913,11 +970,11 @@
             this.lbox_ListNhac.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbox_ListNhac.ForeColor = System.Drawing.Color.LightCoral;
             this.lbox_ListNhac.FormattingEnabled = true;
-            this.lbox_ListNhac.ItemHeight = 23;
+            this.lbox_ListNhac.ItemHeight = 19;
             this.lbox_ListNhac.Location = new System.Drawing.Point(0, 0);
-            this.lbox_ListNhac.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lbox_ListNhac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lbox_ListNhac.Name = "lbox_ListNhac";
-            this.lbox_ListNhac.Size = new System.Drawing.Size(686, 366);
+            this.lbox_ListNhac.Size = new System.Drawing.Size(516, 296);
             this.lbox_ListNhac.TabIndex = 1;
             this.lbox_ListNhac.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lbox_ListNhac_MouseClick);
             this.lbox_ListNhac.SelectedIndexChanged += new System.EventHandler(this.lbox_ListNhac_SelectedIndexChanged);
@@ -934,10 +991,8 @@
             this.gbCaSi.Controls.Add(this.cbo_CaSi);
             this.gbCaSi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbCaSi.Location = new System.Drawing.Point(0, 0);
-            this.gbCaSi.Margin = new System.Windows.Forms.Padding(4);
             this.gbCaSi.Name = "gbCaSi";
-            this.gbCaSi.Padding = new System.Windows.Forms.Padding(4);
-            this.gbCaSi.Size = new System.Drawing.Size(686, 366);
+            this.gbCaSi.Size = new System.Drawing.Size(516, 296);
             this.gbCaSi.TabIndex = 2;
             this.gbCaSi.TabStop = false;
             // 
@@ -945,9 +1000,11 @@
             // 
             this.groupBox1.Controls.Add(this.btn_Them_baiHatByCaSi);
             this.groupBox1.Controls.Add(this.cbo_baiHat_CaSi);
-            this.groupBox1.Location = new System.Drawing.Point(331, 11);
+            this.groupBox1.Location = new System.Drawing.Point(248, 9);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(343, 121);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(257, 98);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thêm vào bài hát";
@@ -973,14 +1030,14 @@
             this.btn_Them_baiHatByCaSi.IconVisible = true;
             this.btn_Them_baiHatByCaSi.IconZoom = 90D;
             this.btn_Them_baiHatByCaSi.IsTab = false;
-            this.btn_Them_baiHatByCaSi.Location = new System.Drawing.Point(11, 53);
-            this.btn_Them_baiHatByCaSi.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_Them_baiHatByCaSi.Location = new System.Drawing.Point(8, 43);
+            this.btn_Them_baiHatByCaSi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Them_baiHatByCaSi.Name = "btn_Them_baiHatByCaSi";
             this.btn_Them_baiHatByCaSi.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btn_Them_baiHatByCaSi.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btn_Them_baiHatByCaSi.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Them_baiHatByCaSi.selected = false;
-            this.btn_Them_baiHatByCaSi.Size = new System.Drawing.Size(150, 45);
+            this.btn_Them_baiHatByCaSi.Size = new System.Drawing.Size(112, 37);
             this.btn_Them_baiHatByCaSi.TabIndex = 9;
             this.btn_Them_baiHatByCaSi.Text = "Thêm";
             this.btn_Them_baiHatByCaSi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -991,26 +1048,18 @@
             // cbo_baiHat_CaSi
             // 
             this.cbo_baiHat_CaSi.FormattingEnabled = true;
-            this.cbo_baiHat_CaSi.Location = new System.Drawing.Point(9, 21);
+            this.cbo_baiHat_CaSi.Location = new System.Drawing.Point(7, 17);
+            this.cbo_baiHat_CaSi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbo_baiHat_CaSi.Name = "cbo_baiHat_CaSi";
-            this.cbo_baiHat_CaSi.Size = new System.Drawing.Size(290, 24);
+            this.cbo_baiHat_CaSi.Size = new System.Drawing.Size(218, 21);
             this.cbo_baiHat_CaSi.TabIndex = 0;
-            // 
-            // btn_Them_CaSi
-            // 
-            this.btn_Them_CaSi.Location = new System.Drawing.Point(211, 109);
-            this.btn_Them_CaSi.Name = "btn_Them_CaSi";
-            this.btn_Them_CaSi.Size = new System.Drawing.Size(112, 23);
-            this.btn_Them_CaSi.TabIndex = 10;
-            this.btn_Them_CaSi.Text = "Thêm ca sĩ";
-            this.btn_Them_CaSi.UseVisualStyleBackColor = true;
-            this.btn_Them_CaSi.Click += new System.EventHandler(this.btn_Them_CaSi_Click);
             // 
             // txt_Them_Casi
             // 
-            this.txt_Them_Casi.Location = new System.Drawing.Point(5, 109);
+            this.txt_Them_Casi.Location = new System.Drawing.Point(4, 89);
+            this.txt_Them_Casi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_Them_Casi.Name = "txt_Them_Casi";
-            this.txt_Them_Casi.Size = new System.Drawing.Size(199, 22);
+            this.txt_Them_Casi.Size = new System.Drawing.Size(150, 20);
             this.txt_Them_Casi.TabIndex = 9;
             // 
             // btnPhat_CaSi
@@ -1034,14 +1083,14 @@
             this.btnPhat_CaSi.IconVisible = true;
             this.btnPhat_CaSi.IconZoom = 90D;
             this.btnPhat_CaSi.IsTab = false;
-            this.btnPhat_CaSi.Location = new System.Drawing.Point(173, 56);
-            this.btnPhat_CaSi.Margin = new System.Windows.Forms.Padding(5);
+            this.btnPhat_CaSi.Location = new System.Drawing.Point(130, 46);
+            this.btnPhat_CaSi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPhat_CaSi.Name = "btnPhat_CaSi";
             this.btnPhat_CaSi.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnPhat_CaSi.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btnPhat_CaSi.OnHoverTextColor = System.Drawing.Color.White;
             this.btnPhat_CaSi.selected = false;
-            this.btnPhat_CaSi.Size = new System.Drawing.Size(150, 45);
+            this.btnPhat_CaSi.Size = new System.Drawing.Size(112, 37);
             this.btnPhat_CaSi.TabIndex = 8;
             this.btnPhat_CaSi.Text = "Phát";
             this.btnPhat_CaSi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1070,17 +1119,17 @@
             this.btnPhatAll_CaSi.IconVisible = true;
             this.btnPhatAll_CaSi.IconZoom = 90D;
             this.btnPhatAll_CaSi.IsTab = false;
-            this.btnPhatAll_CaSi.Location = new System.Drawing.Point(5, 56);
-            this.btnPhatAll_CaSi.Margin = new System.Windows.Forms.Padding(5);
+            this.btnPhatAll_CaSi.Location = new System.Drawing.Point(4, 46);
+            this.btnPhatAll_CaSi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPhatAll_CaSi.Name = "btnPhatAll_CaSi";
             this.btnPhatAll_CaSi.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnPhatAll_CaSi.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btnPhatAll_CaSi.OnHoverTextColor = System.Drawing.Color.White;
             this.btnPhatAll_CaSi.selected = false;
-            this.btnPhatAll_CaSi.Size = new System.Drawing.Size(150, 45);
+            this.btnPhatAll_CaSi.Size = new System.Drawing.Size(112, 37);
             this.btnPhatAll_CaSi.TabIndex = 7;
             this.btnPhatAll_CaSi.Text = "Phát tất cả";
-            this.btnPhatAll_CaSi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPhatAll_CaSi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPhatAll_CaSi.Textcolor = System.Drawing.Color.White;
             this.btnPhatAll_CaSi.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPhatAll_CaSi.Click += new System.EventHandler(this.btnPhatAll_CaSi_Click);
@@ -1119,13 +1168,12 @@
             this.dgvCaSi.EnableHeadersVisualStyles = false;
             this.dgvCaSi.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.dgvCaSi.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvCaSi.Location = new System.Drawing.Point(4, 148);
-            this.dgvCaSi.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvCaSi.Location = new System.Drawing.Point(3, 119);
             this.dgvCaSi.Name = "dgvCaSi";
             this.dgvCaSi.ReadOnly = true;
             this.dgvCaSi.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvCaSi.RowHeadersVisible = false;
-            this.dgvCaSi.Size = new System.Drawing.Size(678, 214);
+            this.dgvCaSi.Size = new System.Drawing.Size(510, 174);
             this.dgvCaSi.TabIndex = 3;
             this.dgvCaSi.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCaSi_CellMouseDoubleClick);
             // 
@@ -1139,10 +1187,9 @@
             // cbo_CaSi
             // 
             this.cbo_CaSi.FormattingEnabled = true;
-            this.cbo_CaSi.Location = new System.Drawing.Point(4, 23);
-            this.cbo_CaSi.Margin = new System.Windows.Forms.Padding(4);
+            this.cbo_CaSi.Location = new System.Drawing.Point(3, 19);
             this.cbo_CaSi.Name = "cbo_CaSi";
-            this.cbo_CaSi.Size = new System.Drawing.Size(319, 24);
+            this.cbo_CaSi.Size = new System.Drawing.Size(240, 21);
             this.cbo_CaSi.TabIndex = 2;
             this.cbo_CaSi.SelectedIndexChanged += new System.EventHandler(this.cbo_CaSi_SelectedIndexChanged);
             // 
@@ -1156,11 +1203,11 @@
             this.pn_menu.GradientBottomRight = System.Drawing.Color.MediumAquamarine;
             this.pn_menu.GradientTopLeft = System.Drawing.Color.SkyBlue;
             this.pn_menu.GradientTopRight = System.Drawing.Color.DarkCyan;
-            this.pn_menu.Location = new System.Drawing.Point(3, 2);
-            this.pn_menu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pn_menu.Location = new System.Drawing.Point(2, 2);
+            this.pn_menu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pn_menu.Name = "pn_menu";
             this.pn_menu.Quality = 10;
-            this.pn_menu.Size = new System.Drawing.Size(293, 570);
+            this.pn_menu.Size = new System.Drawing.Size(220, 462);
             this.pn_menu.TabIndex = 1;
             // 
             // tableLayoutPanel3
@@ -1174,14 +1221,14 @@
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(293, 570);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(220, 462);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
             // tableLayoutPanel5
@@ -1192,24 +1239,24 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.07692F));
             this.tableLayoutPanel5.Controls.Add(this.pictureBox1, 1, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 59);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 48);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 110F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 110F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(287, 110);
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(216, 88);
             this.tableLayoutPanel5.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::MusicPlayer.Properties.Resources.music_100px;
-            this.pictureBox1.Location = new System.Drawing.Point(76, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(57, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(141, 106);
+            this.pictureBox1.Size = new System.Drawing.Size(107, 84);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -1223,8 +1270,8 @@
             this.tableLayoutPanel6.Controls.Add(this.btn_NowPlay, 0, 3);
             this.tableLayoutPanel6.Controls.Add(this.btn_Browser, 0, 4);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 287);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(2, 232);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 5;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -1232,7 +1279,7 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(287, 281);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(216, 228);
             this.tableLayoutPanel6.TabIndex = 3;
             // 
             // btn_Casi
@@ -1258,14 +1305,14 @@
             this.btn_Casi.IconVisible = true;
             this.btn_Casi.IconZoom = 90D;
             this.btn_Casi.IsTab = false;
-            this.btn_Casi.Location = new System.Drawing.Point(5, 61);
-            this.btn_Casi.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_Casi.Location = new System.Drawing.Point(4, 49);
+            this.btn_Casi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Casi.Name = "btn_Casi";
             this.btn_Casi.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Casi.OnHovercolor = System.Drawing.Color.MidnightBlue;
             this.btn_Casi.OnHoverTextColor = System.Drawing.Color.Black;
             this.btn_Casi.selected = false;
-            this.btn_Casi.Size = new System.Drawing.Size(277, 46);
+            this.btn_Casi.Size = new System.Drawing.Size(208, 37);
             this.btn_Casi.TabIndex = 4;
             this.btn_Casi.Text = "Ca sĩ";
             this.btn_Casi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1296,14 +1343,14 @@
             this.btn_BaiHat.IconVisible = true;
             this.btn_BaiHat.IconZoom = 90D;
             this.btn_BaiHat.IsTab = false;
-            this.btn_BaiHat.Location = new System.Drawing.Point(5, 5);
-            this.btn_BaiHat.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_BaiHat.Location = new System.Drawing.Point(4, 4);
+            this.btn_BaiHat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_BaiHat.Name = "btn_BaiHat";
             this.btn_BaiHat.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_BaiHat.OnHovercolor = System.Drawing.Color.MidnightBlue;
             this.btn_BaiHat.OnHoverTextColor = System.Drawing.Color.Black;
             this.btn_BaiHat.selected = false;
-            this.btn_BaiHat.Size = new System.Drawing.Size(277, 46);
+            this.btn_BaiHat.Size = new System.Drawing.Size(208, 37);
             this.btn_BaiHat.TabIndex = 3;
             this.btn_BaiHat.Text = "Bài hát";
             this.btn_BaiHat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1334,14 +1381,14 @@
             this.btn_PlayList.IconVisible = true;
             this.btn_PlayList.IconZoom = 90D;
             this.btn_PlayList.IsTab = false;
-            this.btn_PlayList.Location = new System.Drawing.Point(5, 117);
-            this.btn_PlayList.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_PlayList.Location = new System.Drawing.Point(4, 94);
+            this.btn_PlayList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_PlayList.Name = "btn_PlayList";
             this.btn_PlayList.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_PlayList.OnHovercolor = System.Drawing.Color.MidnightBlue;
             this.btn_PlayList.OnHoverTextColor = System.Drawing.Color.Black;
             this.btn_PlayList.selected = false;
-            this.btn_PlayList.Size = new System.Drawing.Size(277, 46);
+            this.btn_PlayList.Size = new System.Drawing.Size(208, 37);
             this.btn_PlayList.TabIndex = 0;
             this.btn_PlayList.Text = "Danh sách";
             this.btn_PlayList.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1372,14 +1419,14 @@
             this.btn_NowPlay.IconVisible = true;
             this.btn_NowPlay.IconZoom = 90D;
             this.btn_NowPlay.IsTab = false;
-            this.btn_NowPlay.Location = new System.Drawing.Point(5, 173);
-            this.btn_NowPlay.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_NowPlay.Location = new System.Drawing.Point(4, 139);
+            this.btn_NowPlay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_NowPlay.Name = "btn_NowPlay";
             this.btn_NowPlay.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_NowPlay.OnHovercolor = System.Drawing.Color.MidnightBlue;
             this.btn_NowPlay.OnHoverTextColor = System.Drawing.Color.Black;
             this.btn_NowPlay.selected = false;
-            this.btn_NowPlay.Size = new System.Drawing.Size(277, 46);
+            this.btn_NowPlay.Size = new System.Drawing.Size(208, 37);
             this.btn_NowPlay.TabIndex = 1;
             this.btn_NowPlay.Text = "Đang phát";
             this.btn_NowPlay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1410,14 +1457,14 @@
             this.btn_Browser.IconVisible = true;
             this.btn_Browser.IconZoom = 90D;
             this.btn_Browser.IsTab = false;
-            this.btn_Browser.Location = new System.Drawing.Point(5, 229);
-            this.btn_Browser.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_Browser.Location = new System.Drawing.Point(4, 184);
+            this.btn_Browser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Browser.Name = "btn_Browser";
             this.btn_Browser.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Browser.OnHovercolor = System.Drawing.Color.MidnightBlue;
             this.btn_Browser.OnHoverTextColor = System.Drawing.Color.Black;
             this.btn_Browser.selected = false;
-            this.btn_Browser.Size = new System.Drawing.Size(277, 47);
+            this.btn_Browser.Size = new System.Drawing.Size(208, 40);
             this.btn_Browser.TabIndex = 2;
             this.btn_Browser.Text = "Thư mục";
             this.btn_Browser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1436,12 +1483,12 @@
             this.tableLayoutPanel4.Controls.Add(this.btn_Max, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.btn_Close, 2, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(287, 53);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(216, 42);
             this.tableLayoutPanel4.TabIndex = 4;
             // 
             // btn_Min
@@ -1450,10 +1497,10 @@
             this.btn_Min.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Min.Image = global::MusicPlayer.Properties.Resources.minimize_window_100px;
             this.btn_Min.ImageActive = null;
-            this.btn_Min.Location = new System.Drawing.Point(3, 2);
-            this.btn_Min.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Min.Location = new System.Drawing.Point(2, 2);
+            this.btn_Min.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Min.Name = "btn_Min";
-            this.btn_Min.Size = new System.Drawing.Size(88, 49);
+            this.btn_Min.Size = new System.Drawing.Size(67, 38);
             this.btn_Min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_Min.TabIndex = 0;
             this.btn_Min.TabStop = false;
@@ -1466,10 +1513,10 @@
             this.btn_Max.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Max.Image = global::MusicPlayer.Properties.Resources.maximize_window_100px;
             this.btn_Max.ImageActive = null;
-            this.btn_Max.Location = new System.Drawing.Point(97, 2);
-            this.btn_Max.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Max.Location = new System.Drawing.Point(73, 2);
+            this.btn_Max.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Max.Name = "btn_Max";
-            this.btn_Max.Size = new System.Drawing.Size(91, 49);
+            this.btn_Max.Size = new System.Drawing.Size(69, 38);
             this.btn_Max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_Max.TabIndex = 1;
             this.btn_Max.TabStop = false;
@@ -1482,10 +1529,10 @@
             this.btn_Close.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Close.Image = global::MusicPlayer.Properties.Resources.close_window_100px;
             this.btn_Close.ImageActive = null;
-            this.btn_Close.Location = new System.Drawing.Point(194, 2);
-            this.btn_Close.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Close.Location = new System.Drawing.Point(146, 2);
+            this.btn_Close.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Close.Name = "btn_Close";
-            this.btn_Close.Size = new System.Drawing.Size(90, 49);
+            this.btn_Close.Size = new System.Drawing.Size(68, 38);
             this.btn_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_Close.TabIndex = 2;
             this.btn_Close.TabStop = false;
@@ -1529,7 +1576,7 @@
             this.thêmTênCaSĩToolStripMenuItem,
             this.thêmBàiHátVàoPlaylistToolStripMenuItem});
             this.menuBaiHat.Name = "menuBaiHat";
-            this.menuBaiHat.Size = new System.Drawing.Size(252, 52);
+            this.menuBaiHat.Size = new System.Drawing.Size(211, 48);
             // 
             // thêmTênCaSĩToolStripMenuItem
             // 
@@ -1537,7 +1584,7 @@
             this.thêmTênCaSĩToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.thêmTênCaSĩToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.thêmTênCaSĩToolStripMenuItem.Name = "thêmTênCaSĩToolStripMenuItem";
-            this.thêmTênCaSĩToolStripMenuItem.Size = new System.Drawing.Size(251, 24);
+            this.thêmTênCaSĩToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.thêmTênCaSĩToolStripMenuItem.Text = "Thêm tên ca sĩ";
             // 
             // thêmBàiHátVàoPlaylistToolStripMenuItem
@@ -1546,7 +1593,7 @@
             this.thêmBàiHátVàoPlaylistToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.thêmBàiHátVàoPlaylistToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.thêmBàiHátVàoPlaylistToolStripMenuItem.Name = "thêmBàiHátVàoPlaylistToolStripMenuItem";
-            this.thêmBàiHátVàoPlaylistToolStripMenuItem.Size = new System.Drawing.Size(251, 24);
+            this.thêmBàiHátVàoPlaylistToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.thêmBàiHátVàoPlaylistToolStripMenuItem.Text = "Thêm bài hát vào playlist";
             // 
             // fileSystemWatcher1
@@ -1554,71 +1601,29 @@
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
-            // groupBox2
+            // btn_Them_CaSi
             // 
-            this.groupBox2.Controls.Add(this.btn_Them_BHinPL);
-            this.groupBox2.Controls.Add(this.cbo_BaiHat_PL);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(322, 11);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(346, 130);
-            this.groupBox2.TabIndex = 11;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thêm bài hát";
-            // 
-            // cbo_BaiHat_PL
-            // 
-            this.cbo_BaiHat_PL.FormattingEnabled = true;
-            this.cbo_BaiHat_PL.Location = new System.Drawing.Point(9, 33);
-            this.cbo_BaiHat_PL.Name = "cbo_BaiHat_PL";
-            this.cbo_BaiHat_PL.Size = new System.Drawing.Size(334, 28);
-            this.cbo_BaiHat_PL.TabIndex = 0;
-            // 
-            // btn_Them_BHinPL
-            // 
-            this.btn_Them_BHinPL.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_Them_BHinPL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_Them_BHinPL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Them_BHinPL.BorderRadius = 0;
-            this.btn_Them_BHinPL.ButtonText = "Thêm";
-            this.btn_Them_BHinPL.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Them_BHinPL.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Them_BHinPL.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Them_BHinPL.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Them_BHinPL.Iconimage")));
-            this.btn_Them_BHinPL.Iconimage_right = null;
-            this.btn_Them_BHinPL.Iconimage_right_Selected = null;
-            this.btn_Them_BHinPL.Iconimage_Selected = null;
-            this.btn_Them_BHinPL.IconMarginLeft = 0;
-            this.btn_Them_BHinPL.IconMarginRight = 0;
-            this.btn_Them_BHinPL.IconRightVisible = true;
-            this.btn_Them_BHinPL.IconRightZoom = 0D;
-            this.btn_Them_BHinPL.IconVisible = true;
-            this.btn_Them_BHinPL.IconZoom = 90D;
-            this.btn_Them_BHinPL.IsTab = false;
-            this.btn_Them_BHinPL.Location = new System.Drawing.Point(9, 70);
-            this.btn_Them_BHinPL.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.btn_Them_BHinPL.Name = "btn_Them_BHinPL";
-            this.btn_Them_BHinPL.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_Them_BHinPL.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btn_Them_BHinPL.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Them_BHinPL.selected = false;
-            this.btn_Them_BHinPL.Size = new System.Drawing.Size(170, 36);
-            this.btn_Them_BHinPL.TabIndex = 11;
-            this.btn_Them_BHinPL.Text = "Thêm";
-            this.btn_Them_BHinPL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Them_BHinPL.Textcolor = System.Drawing.Color.White;
-            this.btn_Them_BHinPL.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Them_BHinPL.Click += new System.EventHandler(this.btn_Them_BHinPL_Click);
+            this.btn_Them_CaSi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Them_CaSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_Them_CaSi.ForeColor = System.Drawing.Color.LightCoral;
+            this.btn_Them_CaSi.Location = new System.Drawing.Point(157, 89);
+            this.btn_Them_CaSi.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Them_CaSi.Name = "btn_Them_CaSi";
+            this.btn_Them_CaSi.Size = new System.Drawing.Size(85, 22);
+            this.btn_Them_CaSi.TabIndex = 10;
+            this.btn_Them_CaSi.Text = "Thêm ca sĩ";
+            this.btn_Them_CaSi.UseVisualStyleBackColor = true;
+            this.btn_Them_CaSi.Click += new System.EventHandler(this.btn_Them_CaSi_Click);
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(997, 574);
+            this.ClientSize = new System.Drawing.Size(748, 466);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmMain";
             this.Text = "frmMain";
             this.Load += new System.EventHandler(this.frmMain_Load);
@@ -1646,6 +1651,7 @@
             this.panel1.ResumeLayout(false);
             this.gbPLaylist.ResumeLayout(false);
             this.gbPLaylist.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlaylist)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWMP_main)).EndInit();
             this.gbBaihat.ResumeLayout(false);
@@ -1665,7 +1671,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).EndInit();
             this.menuBaiHat.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1741,7 +1746,6 @@
         private System.Windows.Forms.ToolStripMenuItem thêmBàiHátVàoPlaylistToolStripMenuItem;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.TextBox txt_Them_Casi;
-        private System.Windows.Forms.Button btn_Them_CaSi;
         private System.Windows.Forms.GroupBox groupBox1;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Them_baiHatByCaSi;
         private System.Windows.Forms.ComboBox cbo_baiHat_CaSi;
@@ -1750,5 +1754,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Them_BHinPL;
         private System.Windows.Forms.ComboBox cbo_BaiHat_PL;
+        private System.Windows.Forms.Button btn_Them_CaSi;
     }
 }

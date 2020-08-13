@@ -54,7 +54,8 @@ namespace DAL_BLL
 
         public bool check_BH_in_PL_tonTai(string mabh, string mapl)
         {
-            if (da.BaiHatVaPlayLists.Where(t => t.maBaiHat == mabh).SingleOrDefault() == null && da.BaiHatVaPlayLists.Where(t => t.maPlaylist == mapl).SingleOrDefault() == null)
+            var bhpl = from a in da.BaiHatVaPlayLists where  a.maBaiHat == mabh && a.maPlaylist == mapl  select a;
+            if (bhpl.Count() > 0)
                 return false;
             return true;
         }
