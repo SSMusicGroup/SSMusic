@@ -74,15 +74,22 @@ namespace MusicPlayer
         }
         private void frmMain_Load(object sender, EventArgs e)
         {
-            load_dsBaiHat();
-            loadCbo_PlayList();
-            Startindex = 0;
-            playnext = false;
-            StopPlayer();
-            bunifuSlider1.Value = 100;
-            loadCbo_CaSi();
-            loadCbo_BaiHat_In_CaSi();
-            loadCbo_BHinPL();
+            try
+            {
+                load_dsBaiHat();
+                loadCbo_PlayList();
+                Startindex = 0;
+                playnext = false;
+                StopPlayer();
+                bunifuSlider1.Value = 100;
+                loadCbo_CaSi();
+                loadCbo_BaiHat_In_CaSi();
+                loadCbo_BHinPL();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Vui lòng kiểm tra lại kết nối hoặc liên hệ lập trình viên để kiếm tra sự cố");
+            }
         }
 
         public void StopPlayer()
@@ -535,6 +542,7 @@ namespace MusicPlayer
                             Filepath[indexVitri] = daBH.getPathBaiHat(m);
                             indexVitri++;
                             lbox_ListNhac.Items.Add(m);
+                            MessageBox.Show(m);
                         }
                         else
                         {
@@ -745,6 +753,16 @@ namespace MusicPlayer
             cbo_BaiHat_PL.DataSource = daBH.layDSBaiHat();
             cbo_BaiHat_PL.DisplayMember = "tenBaiHat";
             cbo_BaiHat_PL.ValueMember = "maBaiHat";
+        }
+
+        private void btn_ShowWMP_Click(object sender, EventArgs e)
+        {
+            axWMP_main.BringToFront();
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void btn_Browser_Click(object sender, EventArgs e)

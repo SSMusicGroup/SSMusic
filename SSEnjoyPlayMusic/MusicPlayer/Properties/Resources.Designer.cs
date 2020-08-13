@@ -63,6 +63,16 @@ namespace MusicPlayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_new_100px {
+            get {
+                object obj = ResourceManager.GetObject("add_new_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap audio_100px {
             get {
                 object obj = ResourceManager.GetObject("audio_100px", resourceCulture);
@@ -106,6 +116,16 @@ namespace MusicPlayer.Properties {
         internal static System.Drawing.Bitmap checklist_100px {
             get {
                 object obj = ResourceManager.GetObject("checklist_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap circled_play_100px {
+            get {
+                object obj = ResourceManager.GetObject("circled_play_100px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -336,6 +356,26 @@ namespace MusicPlayer.Properties {
         internal static System.Drawing.Bitmap stop_100px {
             get {
                 object obj = ResourceManager.GetObject("stop_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tv_show_100px {
+            get {
+                object obj = ResourceManager.GetObject("tv_show_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap video_playlist_100px {
+            get {
+                object obj = ResourceManager.GetObject("video_playlist_100px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

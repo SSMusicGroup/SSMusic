@@ -61,19 +61,10 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="MediaTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MediaTest.Designer.cs">
-      <DependentUpon>MediaTest.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MediaTest.resx">
-      <DependentUpon>MediaTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -145,6 +136,10 @@
     <Content Include="Image\shuffle_100px.png" />
     <Content Include="Image\skip_to_start_100px.png" />
     <Content Include="Image\stop_100px.png" />
+    <None Include="Resources\add_new_100px.png" />
+    <None Include="Resources\tv_show_100px.png" />
+    <None Include="Resources\video_playlist_100px.png" />
+    <None Include="Resources\circled_play_100px.png" />
     <None Include="Resources\not_shuffle_100px.png" />
     <None Include="Resources\edit_user_100px.png" />
     <None Include="Resources\music_folder_100px.png" />
